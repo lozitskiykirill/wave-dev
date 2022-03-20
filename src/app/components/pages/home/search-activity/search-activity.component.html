@@ -1,0 +1,109 @@
+<div class="home-search">
+  <div>
+    <div class="home-search_wrapper">
+      <div class="home-search_section home-search_location">
+        <!--<input type="text" (keyup)="onKey($event)" value="test value" placeholder="параметр поиска" style="padding: 5px; width: 100%">-->
+        <label for="searchLocation">Где Вы хотите отдохнуть?</label>
+<!--        <label for="activities"></label>-->
+        <input class="popular-directions"
+               type="text" id="searchLocation"
+               name="searchLocation" placeholder="{{directionPlaceholder}}">
+        <ul class="search-filter_list_dropdown popular-directions-list">
+          <li class="active direction-default" >
+            <a href="#">Популярные направления</a>
+          </li>
+          <li
+            *ngFor=" let direction of directions, index as i"
+            (click)="setActiveDirection(direction, i)"
+            [class.active]="direction == activeDirectionItem">
+            {{direction.location}}
+          </li>
+        </ul>
+<!--        <ng-select [items]="searchLocation"-->
+<!--                   bindLabel="name"-->
+<!--                   placeholder="Выберите место"-->
+<!--                   appendTo="body"-->
+<!--                   class="ng-select-home"-->
+<!--                   id="searchLocation"-->
+<!--                   [(ngModel)]="searchLocation_selected">-->
+<!--        </ng-select>-->
+      </div>
+      <div class="home-search_section home-search_place">
+        <label for="searchType">Как Вы хотите отдохнуть?</label>
+<!--        <label for="popular-directions"></label>-->
+        <input class="popular-directions" name="searchType"
+               id="searchType" type="text" placeholder="{{activityTypePlaceholder}}">
+        <ul class="search-filter_list_dropdown popular-directions-list">
+          <li *ngFor=" let activityType of activityTypeList, index as i"
+              (click)="setActiveActivityType(activityType, i)"
+              [class.active]="activityType == activeActivityTypeItem">
+            {{activityType.type}}
+          </li>
+        </ul>
+<!--        <ng-select [items]="searcType"-->
+<!--                   bindLabel="name"-->
+<!--                   placeholder="Выберите вид отдыха"-->
+<!--                   appendTo="body"-->
+<!--                   class="ng-select-home"-->
+<!--                   id="searchType"-->
+<!--                   [(ngModel)]="searcType_selected">-->
+<!--        </ng-select>-->
+      </div>
+      <div class="home-search_section home-search_date">
+        <label for="searchDate">Дата</label>
+<!--        <div class="search-filter_title">-->
+<!--          Дата-->
+<!--        </div>-->
+        <input type="date"
+               value="01.01.2022"
+               id="searchDate"
+               name="searchDate"
+               [defaultValue]="today"
+               placeholder="">
+<!--        <ng-select [items]="searchDate"-->
+<!--                   bindLabel="name"-->
+<!--                   placeholder="Выберите дату"-->
+<!--                   appendTo="body"-->
+<!--                   class="ng-select-home"-->
+<!--                   id="searchDate"-->
+<!--                   [(ngModel)]="searchDate_selected">-->
+<!--        </ng-select>-->
+      </div>
+      <div class="home-search_section home-search_participants">
+        <label for="searchParticipants">Количество участников</label>
+        <input class="popular-directions"
+               name="searchParticipants"
+               id="searchParticipants" type="text" placeholder="{{adultNumberPlaceholder}}">
+        <img class="dropdown-arrow" src="../../../../../assets/images/icons/Arrow.svg" alt="">
+<!--        <div class="search-filter_list_current">-->
+<!--&lt;!&ndash;          <span>Взрослые</span>&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="dropdown-placeholder">&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            2 Взрослых&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            &lt;!&ndash;              <img src="../../../../../assets/images/icons/arrow-slider-left.svg" alt="">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <img class="dropdown-arrow" src="../../../../../assets/images/icons/Arrow.svg" alt="">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+<!--        </div>-->
+        <ul class="search-filter_list_dropdown">
+          <li *ngFor=" let adultNumber of adultNumberList, index as i"
+              (click)="setAdultNumber(adultNumber, i)"
+              [class.active]="adultNumber == activeAdultNumberItem">
+            {{adultNumber.option}}
+          </li>
+        </ul>
+<!--        <ng-select [items]="searchParticipants"-->
+<!--                   bindLabel="name"-->
+<!--                   placeholder="Колличество человек"-->
+<!--                   appendTo="body"-->
+<!--                   class="ng-select-home"-->
+<!--                   id="searchParticipants"-->
+<!--                   [(ngModel)]="searchParticipants_selected">-->
+<!--        </ng-select>-->
+      </div>
+    </div>
+    <div class="home-search_button">
+      <a href="/search" type="submit" class="btn btn-default">
+        <span>Поиск</span>
+      </a>
+    </div>
+  </div>
+</div>

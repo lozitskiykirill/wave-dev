@@ -1,0 +1,48 @@
+<div class="title">
+  Регистрация провайдера: <span>Название и расположение</span>
+</div>
+<div class="progress_bar"></div>
+<div class="base_wrap">
+  <div class="base_left">
+    <div class="page_head">Тарифный план</div>
+    <div class="page_description">Настроить изменение цены на определённые дни вы сможете после добавления своего объекта отдыха.</div>
+    <div class="provider-inventory-container">
+      <div class="item_name">Гребля на байдарке</div>
+      <div class="item" *ngFor="let item of this.providerData">
+        <div class="item_head">
+          <div class="item_title">{{item.provider_name}}</div>
+          <div class="btn btn-default item_button"><span>Изменить</span></div>
+        </div>
+        <div class="item_data">
+          <div class="item_data_row"><div class="left">1-местная байдарка</div><div class="right">300 грн.</div></div>
+          <div class="item_data_row"><div class="left">1-местная байдарка</div><div class="right">500 грн.</div></div>
+          <div class="item_data_row"><div class="left">1-местная байдарка</div><div class="right">900 грн.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="base_right">
+    <div class="card_wrap">
+      <div class="card">
+        <div class="card_icon"><img src="../../../../../assets/images/icons/bulb.svg" alt=""></div>
+        <div class="card_text">
+          <span>Как настроить тарифы?</span><br>
+          Также вы сможете настроить тарифы для каждого инвентаря.
+        </div>
+      </div>
+      <div class="card">
+        <div class="card_icon"><img src="../../../../../assets/images/icons/bulb.svg" alt=""></div>
+        <div class="card_text">
+          <span>Дополнительные опции для инвентаря</span><br>
+          Шлемы, наколенники, багажники, детские кресла
+           и прочие опции для вашего инвентаря вы также 
+           сможете подключить и тарифицировать в платформе 
+           управления провайдером после успешной регистрации.
+        </div>
+      </div>
+    </div>
+    <div class="right_checkbox">
+      <input type="checkbox" name="" id=""><label for="">Снизить цену на 20% для Ваших первых клиентов?</label>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="title">
+  Регистрация провайдера: <span>Название и расположение</span>
+</div>
+<div class="progress_bar"></div>
+<div class="page_head">Активности</div>
+<div class="base_wrap">
+  <div class="base_left">
+    <div class="provider-inventory-container">
+      <div class="item" *ngFor="let item of this.providerData">
+        <div class="item_title">{{item.provider_name}}</div>
+        <div class="btn btn-default item_button"><span>Удалить</span></div>
+      </div>
+    </div>
+    <div class="add_button">
+      <img src="../../../../../assets/images/icons/add_button.svg" alt="">
+      Добавить активность
+    </div>
+  </div>
+  <div class="base_right">
+    <div class="card">
+      <div class="card_icon"><img src="../../../../../assets/images/icons/bulb.svg" alt=""></div>
+      <div class="card_text">
+        <span>Как связаны активности с инвентарём?</span><br>
+        Добавьте активности, которыми люди могут заниматься у вас. 
+        Далее на этапе "Инвентарь и тарифы" вы сможете добавить 
+        инвентарь и настроить тарифы к этим активностям.
+      </div>
+    </div>
+  </div>
+</div>

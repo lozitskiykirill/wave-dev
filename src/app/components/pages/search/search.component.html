@@ -1,0 +1,69 @@
+<div class="page-container">
+  <div class="container">
+
+    <app-breadcrumbs></app-breadcrumbs>
+
+    <div class="search">
+
+      <div class="search_aside">
+        <app-search-filter></app-search-filter>
+      </div>
+
+      <div class="search_column">
+
+        <div class="search_date">
+          <div class="search_arrow_left search_prev">
+            <img src="../../../../assets/images/icons/arrow-slider-left.svg" alt="<">
+          </div>
+          <swiper [config]="configSearchDate" class="swiper-width">
+            <ng-template swiperSlide *ngFor=" let date of dateList">
+              <app-date-list-item [date] = "date"></app-date-list-item>
+            </ng-template>
+          </swiper>
+          <div class="search_arrow_right search_next">
+            <img src="../../../../assets/images/icons/arrow-slider-right.svg" alt=">">
+          </div>
+        </div>
+
+        <div class="search_title">
+          <h2>Найдено 38 вариантов</h2>
+          <div class="search-filter_list">
+            <div class="search-filter_list_current">
+              <div class="dropdown-placeholder">
+                <span>Рекомендации</span>
+                <!--              <img src="../../../../../assets/images/icons/arrow-slider-left.svg" alt="">-->
+                <img class="dropdown-arrow" src="../../../../assets/images/icons/Vector-recomend.svg" alt="">
+              </div>
+              <ul class="search-filter_list_dropdown">
+                <li class="active">
+                  <a href="#">Новые</a>
+                </li>
+                <li>
+                  <a href="#">Самые дешевые</a>
+                </li>
+                <li>
+                  <a href="#">Ближайшие</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="search_card-container">
+
+          <div class="search_card" *ngFor=" let card of cards">
+            <app-card [cardData] = "card"></app-card>
+          </div>
+
+
+        </div>
+
+        <app-pagination></app-pagination>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

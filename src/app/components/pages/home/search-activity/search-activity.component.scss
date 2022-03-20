@@ -1,0 +1,193 @@
+@import "styles/grid";
+@import "variables";
+
+.ng-select {
+  font-family: 'Raleway', sans-serif;
+  .ng-select-container {
+    border-color: transparent transparent $text-color-1;
+
+    //font-weight: 600;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    color: $heading-color;
+    .ng-value-container {
+      padding-left: 0;
+    }
+  }
+  &.ng-select-opened {
+    .ng-select-container {
+      border-color: transparent transparent $text-color-1;
+    }
+  }
+  &.ng-select-focused {
+    &:not(.ng-select-opened) {
+      .ng-select-container {
+        box-shadow: none;
+        border-color: transparent transparent $text-color-1;
+      }
+    }
+  }
+}
+
+.ng-dropdown-panel {
+  font-family: 'Raleway', sans-serif;
+  .ng-dropdown-panel-items {
+    .ng-option {
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.01em;
+      color: $text-color-1;
+
+      padding: 10px 20px;
+      //background-color: rgba(218, 223, 234, 0.5);
+      background-color: rgba(255, 255, 255, 1);
+      &.ng-option-marked {
+        background-color: $dropdown-hover-color;
+      }
+    }
+  }
+}
+
+
+.home-search {
+  input {
+    @include custom-inputs;
+  }
+  &_wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    @media (max-width: $md-max) {
+      flex-direction: column;
+    }
+  }
+  &_section {
+    position: relative;
+    label {
+      font-family: Raleway;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 19px;
+      letter-spacing: 0.01em;
+      text-align: left;
+      color: $text-color-1;
+      display: block;
+    }
+    li {
+      width: 230px;
+      display: block;
+      list-style-type: none;
+      padding: 8px 16px;
+      background-color: $background-color-1;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(218, 223, 234, 0.5);
+        a {
+          text-decoration: none;
+          background: linear-gradient(#86858A , #86858A);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      a {
+        font-family: Raleway;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 19px;
+        letter-spacing: 0.03em;
+        text-align: left;
+        color: $text-color-1;
+      }
+    }
+
+    .popular-directions:focus ~ .search-filter_list_dropdown {
+      visibility: visible;
+      opacity: 1;
+      top: 60px;
+      z-index: 5;
+    }
+    .search-filter_list {
+      position: relative;
+      @include dropdown-menu;
+    }
+
+    flex: 0 0 250px;
+    max-width: 250px;
+    @media (max-width: $md-max) {
+      flex: unset;
+      max-width: unset;
+      margin-bottom: 25px;
+    }
+    label {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.01em;
+      color: $text-color-1;
+      padding-bottom: 8px;
+    }
+    input {
+      &::placeholder {
+        font-weight: 700;
+      }
+    }
+  }
+  &_date {
+    flex: 0 0 170px;
+    max-width: 170px;
+    @media (max-width: $md-max) {
+      flex: unset;
+      max-width: unset;
+      margin-bottom: 36px;
+    }
+  }
+  &_participants {
+    position: relative;
+    input {
+
+    }
+    input:focus ~ img {
+      transform: rotate(180deg);
+      transition: 0.5s;
+    }
+    img {
+      position: absolute;
+      top: 25px;
+      right: 3px;
+      transform: rotate(0deg);
+      transition: 0.5s;
+    }
+  }
+  &_button {
+    transform: translateY(50%);
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: 35px;
+
+    .btn {
+      width: 320px;
+      height: 60px;
+
+      font-size: 18px;
+    }
+  }
+}
+
+
+
+.home-search_location, .home-search_place {
+  width: 230px;
+  @include font-bold;
+}
+.home-search_location,
+.home-search_participants,
+.home-search_place {
+
+}
+
+

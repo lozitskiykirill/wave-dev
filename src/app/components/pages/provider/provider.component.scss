@@ -1,0 +1,131 @@
+@import "../../../../styles/grid.scss";
+@import "../../../../variables.scss";
+.breadcrumbs_wrap {
+    max-width: 1170px;
+    margin: 0 auto;
+    @media (max-width: $lg-max) {
+        padding: 0 16px;
+    }
+}
+.container_wrap {
+    background-color: $background-color-1;
+    border: 0.5px solid $border-color-1;
+    box-shadow: $box-shadow-1;
+    border-radius: 4px;
+}
+
+.top_wrap {
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 32px 70px 0 32px;
+    position: relative;
+    @media (max-width: $md-max) {
+        padding: 32px 70px 0 18px;
+    }
+}
+
+.top_left {
+    min-height: 100%;
+    margin: 0 15px 0 0;
+}
+.title_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.title_provider {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.01em;
+    color: $heading-color;
+}
+.address_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 13px 0 0 0;
+}
+.address {
+    font-size: 14px;
+    line-height: 20px;
+    color: $text-color-1;
+    margin: 0 16px 0 0;
+    word-break: break-word;
+}
+.from_center {
+    font-size: 14px;
+    line-height: 20px;
+    color: $text-color-1;
+    min-width: max-content;
+}
+.top_right {
+    min-height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.reviews {
+    margin: 20px 20px 0 0;
+    a {
+        line-height: 16px;
+        text-decoration-line: underline;
+        color: $theme-color-1;
+    }
+}
+
+.main_wrap {
+    padding: 50px 120px 120px 120px;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); 
+    gap: 60px 50px; 
+    justify-items: center; 
+    @media (max-width: $md-max) {
+        padding: 50px 40px 120px 40px;
+    }
+    @media (max-width: $sm-max) {
+        padding: 50px 20px 120px 20px;
+        gap: 40px 30px; 
+    }
+}
+
+.item {
+    max-width: 270px;
+    width: 100%;
+}
+
+.img {
+    height: 300px;
+    img {
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        box-shadow: $box-shadow-1;
+    }
+}
+.main {
+    margin: 24px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item_name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: $heading-color;
+    cursor: pointer;
+}
+.item_price {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: $theme-color-1;
+    cursor: pointer;
+    min-width: max-content;
+}

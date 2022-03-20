@@ -1,0 +1,38 @@
+<div class="page-container">
+    <div class="breadcrumbs_wrap">
+        <app-breadcrumbs></app-breadcrumbs>
+    </div>
+    <div class="container">
+        <div class="container_wrap">
+            <div class="top_wrap">
+                <div class="top_left">
+                    <div class="title_wrap">
+                        <div class="title_provider">{{ provider.title }}</div>
+                        <app-like-item></app-like-item>
+                    </div>
+                    <div class="address_wrap">
+                        <div class="address">{{ provider.address }}</div>
+                        <div class="from_center"><img src="../../../../assets/images/icons/pin.svg" alt=""> {{ provider.distance }}</div>
+                    </div>
+                </div>
+                <div class="top_right">
+                    <div class="reviews"><a href="#">{{ provider.reviews_num }}</a></div>
+                    <app-rating-box></app-rating-box>
+                </div>
+            </div>
+            <div class="main_wrap">
+
+                <div class="item" *ngFor="let item of this.provider.activities">
+                    <div class="img" [routerLink]="item.link">
+                        <img src="{{ item.image }}" alt="">
+                    </div>
+                    <div class="main">
+                        <div class="item_name" [routerLink]="item.link">{{ item.name }}</div>
+                        <div class="item_price" [routerLink]="item.link">от {{ item.price }} грн</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

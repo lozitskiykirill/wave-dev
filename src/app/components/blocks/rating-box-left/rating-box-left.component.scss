@@ -1,0 +1,20 @@
+@import "../../../../variables";
+
+.rating-box-left {
+  @include rating-box-main_styles;
+  background-color: $theme-color-1;
+  @include rating-box-styles-left;
+  &:after {
+    @include rating-box-main_styles-after-left;
+    border-top: 2px solid #3e48cb;
+    border-right: 5px solid #3e48cb;
+  }
+}
+
+.rating-box-left-popular {
+  @include rating-box-main_styles;
+  @include rating-box-styles-left;
+  &:after {
+    @include rating-box-main_styles-after-left;
+  }
+}

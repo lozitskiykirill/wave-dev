@@ -1,0 +1,358 @@
+<div style="height: 350px; width: 100%; background-color: lightgrey; text-align: center; margin: 30px 0;">kirill</div>
+
+<div class="items_head">
+    <div class="head_inventory">Инвентарь</div>
+    <div class="head_type">Тип</div>
+    <div class="head_amount">Количество</div>
+    <div class="head_fare">Тариф</div>
+</div>
+<div class="items_wrap">
+
+
+    <div class="item">
+        <div class="inventory">
+            <div class="title_sm">Инвентарь</div>
+            <div class="image">
+                <img src="../../../../../assets/images/prototype/baydarka.jpg" alt="">
+            </div>
+            <div class="title_wrap">
+                <div class="title">Байдарка</div>
+                <div class="age">Минимальный возраст: 7 лет <img class="age_img" src="../../../../../assets/images/icons/question.svg" alt="?"><div class="age_message">Какое-то сообщение</div></div>
+            </div>
+        </div>
+        <div class="type">
+            <div class="title_sm">Тип</div>
+            <div class="options_wrap">
+                <div class="options">
+                    <div class="options_current">1-местная</div>
+                    <div class="options_arrow"><img class="dropdown-arrow" src="../../../../../assets/images/icons/Arrow.svg" alt=""></div>
+                </div>
+                <ul class="options_list">
+                    <li>1-местная</li>
+                    <li>2-местная</li>
+                    <li>3-местная</li>
+                </ul>
+            </div>
+        </div>
+        <div class="amount">
+            <div class="title_sm">Количество</div>
+            <div class="amount_block">
+                <div class="amount_minus" (click)="amountMinus()">-</div>
+                <div class="amount_number">{{ this.amount }}</div>
+                <div class="amount_plus" (click)="amountPlus()">+</div>
+            </div>
+        </div>
+        <div class="fare">
+            <div class="title_sm">Тариф</div>
+            <div class="fare_row_wrap">
+                <div class="fare_row">
+                    <div class="fare_row_main">
+                        <div class="fare_type radio-item">
+                            <input type="radio" name="n1" id="n11" checked><label for="n11">Обычный</label>
+                        </div>
+                        <div class="fare_price_block">
+                            <div class="fare_old_price">350.00</div>
+                            <div class="fare_price">315.00</div>
+                        </div>
+                        <div class="fares_popup">
+                            <div class="popup_title">Тарифы:</div>
+                            <div class="popup_prices">
+                                    
+                                <div class="popup_main">
+                                    <div class="header_title">Длительность</div>
+                                    <div class="header_title">Цена</div>
+                                    <div class="popup_left">1 час</div>
+                                    <div class="popup_right">300 грн</div>
+                                    <div class="popup_left">3 час</div>
+                                    <div class="popup_right">400 грн</div>
+                                    <div class="popup_left">5 час</div>
+                                    <div class="popup_right">700 грн</div>
+                                    <div class="popup_left">1 сутки</div>
+                                    <div class="popup_right">1000 грн</div>
+                                    <div class="popup_left">2 суток</div>
+                                    <div class="popup_right">1400 грн</div>
+                                    <div class="popup_left">3 суток</div>
+                                    <div class="popup_right">1800 грн</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fare_row_sale">
+                        <div class="fare_sale">Скидка 10% с 10:00 до 11:00</div>
+                        <div class="fare_sale">Скидка 10% с 18:00 до 20:00</div>
+                    </div>
+                </div>
+                <div class="fare_row">
+                    <div class="fare_row_main">
+                        <div class="fare_type radio-item">
+                            <input type="radio" name="n1" id="n12"><label for="n12">Невозвратный</label>
+                        </div>
+                        <div class="fare_price_block">
+                            <div class="fare_price">300.00</div>
+                        </div>
+                        <div class="fares_popup">
+                            <div class="popup_title">Тарифы:</div>
+                            <div class="popup_prices">
+                                    
+                                <div class="popup_main">
+                                    <div class="header_title">Длительность</div>
+                                    <div class="header_title">Цена</div>
+                                    <div class="popup_left">1 час</div>
+                                    <div class="popup_right">300 грн</div>
+                                    <div class="popup_left">3 час</div>
+                                    <div class="popup_right">400 грн</div>
+                                    <div class="popup_left">5 час</div>
+                                    <div class="popup_right">700 грн</div>
+                                    <div class="popup_left">1 сутки</div>
+                                    <div class="popup_right">1000 грн</div>
+                                    <div class="popup_left">2 суток</div>
+                                    <div class="popup_right">1400 грн</div>
+                                    <div class="popup_left">3 суток</div>
+                                    <div class="popup_right">1800 грн</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item_buttons">
+                <div class="item_buttons_wrap">
+                    <img class="item_img" src="../../../../../assets/images/icons/question.svg" alt="">
+                    <div class="item_message">Какой-то месседж</div>
+                    <img src="../../../../../assets/images/icons/cross-violet.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="item nonreturn">
+        <div class="inventory">
+            <div class="title_sm">Инвентарь</div>
+            <div class="image">
+                <img src="../../../../../assets/images/prototype/baydarka.jpg" alt="">
+            </div>
+            <div class="title_wrap">
+                <div class="title">Байдарка</div>
+                <div class="age">Минимальный возраст: 7 лет <img class="age_img" src="../../../../../assets/images/icons/question.svg" alt="?"><div class="age_message">Верстальщик у вас хороший</div></div>
+            </div>
+        </div>
+        <div class="type">
+            <div class="title_sm">Тип</div>
+            <div class="options_wrap">
+                <div class="options">
+                    <div class="options_current">2-местная</div>
+                    <div class="options_arrow"><img class="dropdown-arrow" src="../../../../../assets/images/icons/Arrow.svg" alt=""></div>
+                </div>
+                <ul class="options_list">
+                    <li>1-местная</li>
+                    <li>2-местная</li>
+                    <li>3-местная</li>
+                </ul>
+            </div>
+        </div>
+        <div class="amount">
+            <div class="title_sm">Количество</div>
+            <div class="amount_block">
+                <div class="amount_minus" (click)="amountMinus()">-</div>
+                <div class="amount_number">{{ this.amount }}</div>
+                <div class="amount_plus" (click)="amountPlus()">+</div>
+            </div>
+        </div>
+        <div class="fare">
+            <div class="title_sm">Тариф</div>
+            <div class="fare_row_wrap">
+                <div class="fare_row">
+                    <div class="fare_row_main">
+                        <div class="fare_type radio-item">
+                            <input type="radio" name="n2" id="n21"><label for="n21">Обычный</label>
+                        </div>
+                        <div class="fare_price_block">
+                            <div class="fare_price">360.00</div>
+                        </div>
+                        <div class="fares_popup">
+                            <div class="popup_title">Тарифы:</div>
+                            <div class="popup_prices">
+                                    
+                                <div class="popup_main">
+                                    <div class="header_title">Длительность</div>
+                                    <div class="header_title">Цена</div>
+                                    <div class="popup_left">1 час</div>
+                                    <div class="popup_right">300 грн</div>
+                                    <div class="popup_left">3 час</div>
+                                    <div class="popup_right">400 грн</div>
+                                    <div class="popup_left">5 час</div>
+                                    <div class="popup_right">700 грн</div>
+                                    <div class="popup_left">1 сутки</div>
+                                    <div class="popup_right">1000 грн</div>
+                                    <div class="popup_left">2 суток</div>
+                                    <div class="popup_right">1400 грн</div>
+                                    <div class="popup_left">3 суток</div>
+                                    <div class="popup_right">1800 грн</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fare_row">
+                    <div class="fare_row_main">
+                        <div class="fare_type radio-item">
+                            <input type="radio" name="n2" id="n22" checked><label for="n22">Невозвратный</label>
+                        </div>
+                        <div class="fare_price_block">
+                            <div class="fare_price">320.00</div>
+                        </div>
+                        <div class="fares_popup">
+                            <div class="popup_title">Тарифы:</div>
+                            <div class="popup_prices">
+                                    
+                                <div class="popup_main">
+                                    <div class="header_title">Длительность</div>
+                                    <div class="header_title">Цена</div>
+                                    <div class="popup_left">1 час</div>
+                                    <div class="popup_right">300 грн</div>
+                                    <div class="popup_left">3 час</div>
+                                    <div class="popup_right">400 грн</div>
+                                    <div class="popup_left">5 час</div>
+                                    <div class="popup_right">700 грн</div>
+                                    <div class="popup_left">1 сутки</div>
+                                    <div class="popup_right">1000 грн</div>
+                                    <div class="popup_left">2 суток</div>
+                                    <div class="popup_right">1400 грн</div>
+                                    <div class="popup_left">3 суток</div>
+                                    <div class="popup_right">1800 грн</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item_buttons">
+                <div class="item_buttons_wrap">
+                    <img class="item_img" src="../../../../../assets/images/icons/question.svg" alt="">
+                    <div class="item_message">очень даже</div>
+                    <img src="../../../../../assets/images/icons/cross-violet.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="inventory">
+            <div class="title_sm">Инвентарь</div>
+            <div class="image">
+                <img src="../../../../../assets/images/prototype/baydarka.jpg" alt="">
+            </div>
+            <div class="title_wrap">
+                <div class="title">Байдарка</div>
+                <div class="age">Минимальный возраст: 7 лет <img class="age_img" src="../../../../../assets/images/icons/question.svg" alt="?"><div class="age_message">Какое-то сообщение</div></div>
+            </div>
+        </div>
+        <div class="type">
+            <div class="title_sm">Тип</div>
+            <div class="options_wrap">
+                <div class="options">
+                    <div class="options_current">3-местная</div>
+                    <div class="options_arrow"><img class="dropdown-arrow" src="../../../../../assets/images/icons/Arrow.svg" alt=""></div>
+                </div>
+                <ul class="options_list">
+                    <li>1-местная</li>
+                    <li>2-местная</li>
+                    <li>3-местная</li>
+                </ul>
+            </div>
+        </div>
+        <div class="amount">
+            <div class="title_sm">Количество</div>
+            <div class="amount_block">
+                <div class="amount_minus" (click)="amountMinus()">-</div>
+                <div class="amount_number">{{ this.amount }}</div>
+                <div class="amount_plus" (click)="amountPlus()">+</div>
+            </div>
+        </div>
+        <div class="fare">
+            <div class="title_sm">Тариф</div>
+            <div class="fare_row_wrap">
+                <div class="fare_row">
+                    <div class="fare_row_main">
+                        <div class="fare_type radio-item">
+                            <input type="radio" name="n3" id="n31" checked><label for="n31">Обычный</label>
+                        </div>
+                        <div class="fare_price_block">
+                            <div class="fare_price">400.00</div>
+                        </div>
+                        <div class="fares_popup">
+                            <div class="popup_title">Тарифы:</div>
+                            <div class="popup_prices">
+                                    
+                                <div class="popup_main">
+                                    <div class="header_title">Длительность</div>
+                                    <div class="header_title">Цена</div>
+                                    <div class="popup_left">1 час</div>
+                                    <div class="popup_right">300 грн</div>
+                                    <div class="popup_left">3 час</div>
+                                    <div class="popup_right">400 грн</div>
+                                    <div class="popup_left">5 час</div>
+                                    <div class="popup_right">700 грн</div>
+                                    <div class="popup_left">1 сутки</div>
+                                    <div class="popup_right">1000 грн</div>
+                                    <div class="popup_left">2 суток</div>
+                                    <div class="popup_right">1400 грн</div>
+                                    <div class="popup_left">3 суток</div>
+                                    <div class="popup_right">1800 грн</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fare_row">
+                    <div class="fare_row_main">
+                        <div class="fare_type radio-item">
+                            <input type="radio" name="n3" id="n32"><label for="n32">Невозвратный</label>
+                        </div>
+                        <div class="fare_price_block">
+                            <div class="fare_price">360.00</div>
+                        </div>
+                        <div class="fares_popup">
+                            <div class="popup_title">Тарифы:</div>
+                            <div class="popup_prices">
+                                    
+                                <div class="popup_main">
+                                    <div class="header_title">Длительность</div>
+                                    <div class="header_title">Цена</div>
+                                    <div class="popup_left">1 час</div>
+                                    <div class="popup_right">300 грн</div>
+                                    <div class="popup_left">3 час</div>
+                                    <div class="popup_right">400 грн</div>
+                                    <div class="popup_left">5 час</div>
+                                    <div class="popup_right">700 грн</div>
+                                    <div class="popup_left">1 сутки</div>
+                                    <div class="popup_right">1000 грн</div>
+                                    <div class="popup_left">2 суток</div>
+                                    <div class="popup_right">1400 грн</div>
+                                    <div class="popup_left">3 суток</div>
+                                    <div class="popup_right">1800 грн</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item_buttons">
+                <div class="item_buttons_wrap">
+                    <img class="item_img" src="../../../../../assets/images/icons/question.svg" alt="">
+                    <div class="item_message">Какой-то месседж</div>
+                    <img src="../../../../../assets/images/icons/cross-violet.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="total_wrap">
+    <div class="add_inventory"><img src="../../../../assets/images/icons/add_button.svg" alt=""> Добавить инвентарь</div>
+    <div class="total">
+        <div class="total_title">ИТОГО:</div>
+        <div class="total_price">1035 грн</div>
+    </div>
+</div>

@@ -1,0 +1,140 @@
+@import "../../../../variables";
+@import "../../../../styles/grid.scss";
+.container {
+  .search {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $siteWidth) {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: flex-start;
+    }
+    @media (max-width: $sm-max) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &_aside {
+      flex: 1 1 270px;
+      //flex: 1 0 270px;
+      width: 100%;
+      max-width: 270px;
+      margin-right: 24px;
+      @media (max-width: $siteWidth) {
+        min-width: 230px;
+      }
+      @media (max-width: $sm-max) {
+        margin: 0 auto;
+        max-width: 100%;
+      }
+    }
+
+    &_column {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 870px;
+      @media (max-width: $siteWidth) {
+        width: 100%;
+        min-width: 300px;
+      }
+    }
+
+
+    &_card {
+      margin-bottom: 20px;
+    }
+
+    .search_title {
+      h2 {
+        margin: 30px 0;
+        @include font_h2-header;
+        @media (max-width: 512px) {
+          font-size: 24px;
+        }
+      }
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media (max-width: 512px) {
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
+    }
+
+    .search-filter_list {
+      position: relative;
+      @include dropdown-menu;
+      img {
+        transform: rotate(0deg);
+        transition: 0.5s;
+      }
+      :hover {
+        img {
+          transform: rotate(180deg);
+          transition: 0.5s;
+        }
+      }
+      .search-filter_list_current {
+        padding-right: 0;
+        span {
+          @include font-normal;
+        }
+        .search-filter_list_dropdown {
+          top: 40px;
+        }
+      }
+      .dropdown-placeholder {
+        width: 118px;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: none;
+
+        .dropdown-arrow {
+          //@include font-normal;
+          position: relative;
+          top: 0;
+          left: 8px;
+          img {
+            color: $text-color-1;
+          }
+          //top: 7px;
+        }
+      }
+    }
+
+    .search_date {
+      min-height: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (max-width: $siteWidth) {
+        min-width: 300px;
+      }
+      @media (max-width: $sm-max) {
+        max-width: 750px;
+      }
+    }
+  }
+}
+
+.search_arrow_left,
+.search_arrow_right {
+  min-width: 30px;
+  display: flex;
+  align-items: center;
+  img {
+    cursor: pointer;
+  }
+}
+.search_arrow_left {
+  justify-content: flex-start;
+}
+.search_arrow_right {
+  justify-content: flex-end;
+}
+
+.swiper-button-disabled {
+  opacity: 0.3;
+}

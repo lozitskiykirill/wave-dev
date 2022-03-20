@@ -1,0 +1,187 @@
+@import "variables";
+
+.header {
+  position: absolute;
+  z-index: 200;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  .logo {
+    margin-right: auto;
+  }
+  &_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    min-height: $header-height;
+  }
+  &_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 991px) {
+      display: none;
+    }
+
+    a {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.01em;
+      cursor: pointer;
+
+      color: $heading-color;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0 10px;
+      img {
+        margin-left: 24px;
+      }
+      &:not(:last-of-type) {
+        margin-right: 50px;
+      }
+    }
+  }
+  &_user {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+  }
+  &_notifications {
+    margin: 0 12px;
+    cursor: pointer;
+    &:hover {
+      .header_notifications_dropdown {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &_icon {
+      position: relative;
+    }
+    &_counter {
+      width: 12px;
+      height: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: $theme-color-1;
+      font-weight: 600;
+      font-size: 10px;
+      line-height: 12px;
+      color: $text-color-3;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    &_dropdown {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      margin-top: 10px;
+      width: 100%;
+      min-width: 200px;
+      padding: 30px 25px 40px 25px;
+      background: $background-color-1;
+
+      box-shadow: 0px 0px 18px rgba(78, 90, 254, 0.16);
+      border-radius: 8px;
+
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s;
+    }
+  }
+  &_notification {
+    color: $theme-color-1;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    &:not(:last-of-type) {
+      margin-bottom: 16px;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &_messages {
+    margin: 0 12px;
+    cursor: pointer;
+  }
+  &_username {
+    margin: 0 12px;
+    cursor: pointer;
+  }
+  &_avatar {
+    margin: 0 12px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .header-lang {
+    margin-left: 50px;
+  }
+}
+
+.mobile-temp-icon {
+  display: none;
+  width: 36px;
+}
+
+@media (max-width: 991px) {
+  .mobile-temp-icon {
+    display: block;
+  }
+}
+.account_dropdown_hover {
+  display: flex;
+  align-items: center;
+}
+.account_dropdown {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 220px;
+  padding: 30px 25px;
+  background: $background-color-1;
+
+  box-shadow: $box-shadow-1;
+  border-radius: 8px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.account_item {
+  color: $theme-color-1;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0 0 16px 0;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.account_dropdown_hover:hover + .account_dropdown,
+.account_dropdown:hover{
+    visibility: visible;
+    opacity: 1;
+}

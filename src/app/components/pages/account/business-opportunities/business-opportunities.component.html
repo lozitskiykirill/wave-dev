@@ -1,0 +1,54 @@
+<div class="title" *ngIf="!isAddProvider">Бизнес-возможности</div>
+<div class="main" *ngIf="!isAddProvider">
+
+
+    <div class="card">
+        <div class="card_title">Гид</div>
+        <div class="card_list">
+            <div class="card_list_title">Сохраняйте:</div>
+            <ul>
+                <li>Избранный список активностей</li>
+                <li>Избранный список маршрутов</li>
+                <li>Список забронированных туров</li>
+                <li>Список забронированного инвентаря</li>
+            </ul>
+        </div>
+        <div class="card_list">
+            <div class="card_list_title">Создавайте:</div>
+            <ul>
+                <li>Маршруты</li>
+                <li>Туры</li>
+            </ul>
+        </div>
+        <button class="btn btn-default card_button"><span>Продолжить</span></button>
+        <div class="card_bottom">После регистрации с Вами свяжутся для подтверждения личности.</div>
+    </div>
+
+
+
+    <div class="card">
+        <div class="card_title">Провайдер</div>
+        <div class="card_list">
+            <div class="card_list_title">Сохраняйте:</div>
+            <ul>
+                <li>Избранный список активностей</li>
+                <li>Избранный список маршрутов</li>
+                <li>Список забронированных туров</li>
+                <li>Список забронированного инвентаря</li>
+            </ul>
+        </div>
+        <div class="card_list">
+            <div class="card_list_title">Создавайте:</div>
+            <ul>
+                <li>Маршруты</li>
+                <li>Туры</li>
+            </ul>
+        </div>
+        <button class="btn btn-default card_button" [routerLink]="'/reg-provider'"><span>Продолжить</span></button>
+        <div class="card_bottom">После регистрации с Вами свяжутся для подтверждения личности.</div>
+    </div>
+
+
+
+</div>
+<app-add-provider *ngIf="isAddProvider"></app-add-provider>

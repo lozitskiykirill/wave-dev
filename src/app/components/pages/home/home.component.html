@@ -1,0 +1,146 @@
+<app-home-banner
+  [homeBannerImage]="homeBannerImage"
+  [homeBannerText]="homeBannerText"
+  >
+</app-home-banner>
+<div class="container">
+  <div class="home-search-block">
+    <div class="home-search-block_info">
+      <app-show-date></app-show-date>
+      <div class="home-search-block_weather">
+        <div>
+          <img src="../../../../assets/images/icons/weather-type.svg" alt="weather-type">
+        </div>
+       <div>
+         22
+       </div>
+        <div>
+          <span>Киев</span>
+          <span>Украина</span>
+        </div>
+      </div>
+    </div>
+    <app-search-activity></app-search-activity>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="home-heading">
+    <h2>Провайдеры с наивысшим рейтингом</h2>
+    <div class="home-subtitle">
+      Предлагаем провайдеры активностей с наивысшим рейтингом по мнению посетителей. Отдыхайте с комфортом по самым выгодным ценам.
+    </div>
+  </div>
+
+  <div class="home-facilities">
+    <div class="home-facilities_arrows">
+      <div class="swiper-button-prev home-facilities_prev">
+        <img src="../../../../assets/images/icons/arrow-slider-left.svg" alt="<">
+      </div>
+      <div class="swiper-button-next home-facilities_next">
+        <img src="../../../../assets/images/icons/arrow-slider-right.svg" alt=">">
+      </div>
+    </div>
+    <swiper
+      [config]="configFacilities"
+    >
+
+      <ng-template swiperSlide
+        *ngFor=" let bestFacility of bestFacilities;">
+        <app-top-rate-activities
+          [bestFacility]="bestFacility"
+        >
+        </app-top-rate-activities>
+      </ng-template>
+    </swiper>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="home-heading text-center">
+    <h2>Ближайшие события</h2>
+    <div class="home-subtitle">
+      Предлагаем объекты отдыха с наивысшим рейтингом по мнению посетителей. Отдыхайте с комфортом по самым выгодным ценам.
+    </div>
+  </div>
+
+  <div class="upcoming-events">
+      <app-upcoming-activity
+        *ngFor=" let upcomingEvent of upcomingEvents"
+        [upcomingEvent] = "upcomingEvent"
+      >
+      </app-upcoming-activity>
+  </div>
+</div>
+
+<div class="container-fluid home-pop-activities">
+  <div class="container">
+
+    <div class="home-heading">
+      <h2>Популярные активности</h2>
+    </div>
+
+    <div class="home-pop-activities_arrows">
+      <div class="swiper-button-prev home-pop-activities_prev">
+        <img src="../../../../assets/images/icons/arrow-slider-left.svg" alt="<">
+      </div>
+      <div class="swiper-button-next home-pop-activities_next">
+        <img src="../../../../assets/images/icons/arrow-slider-right.svg" alt=">">
+      </div>
+    </div>
+
+
+    <div class="home-pop-activities_wrapper">
+      <div class="home-pop-activities_menu">
+        <ul>
+          <li>
+            <a href="/search">
+              Аренда снаряжения
+            </a>
+          </li>
+          <li>
+            <a href="/search">
+              Пешие туры
+            </a>
+          </li>
+          <li>
+            <a href="/search">
+              Картинг
+            </a>
+          </li>
+          <li>
+            <a href="/search">
+              Пейнтбол
+            </a>
+          </li>
+          <li>
+            <a href="/search">
+              Прыжки с парашютом
+            </a>
+          </li>
+          <li>
+            <a href="/search">
+              Рафтинг
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="home-pop-activities_slider">
+        <swiper
+          [config]="configPopActivity"
+        >
+          <ng-template swiperSlide *ngFor="
+            let popularActivity of popularActivities">
+            <app-popular-activity
+              [popularActivity]="popularActivity"
+            >
+            </app-popular-activity>
+          </ng-template>
+        </swiper>
+      </div>
+    </div>
+  </div>
+</div>

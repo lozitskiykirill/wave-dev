@@ -1,0 +1,107 @@
+@import "styles/grid";
+@import "variables";
+
+.reg-type {
+  padding: 0 0 20px 0;
+  &_heading {
+    margin: 125px 0 32px 0;
+    color: $heading-color;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  &_columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    @media (max-width: $lg-max) {
+      grid-column-gap: 12px;
+    }
+    @media (max-width: $md-max) {
+      grid-template-columns: 1fr;
+    }
+    @media (max-width: $xs-max) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &_column {
+    background-color: $background-color-1;
+    padding: 23px 28px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    border: 0.5px solid $border-color-1;
+    box-sizing: border-box;
+    box-shadow: $box-shadow-1;
+    border-radius: 4px;
+    transition: 0.3s;
+
+    @media (max-width: $md-max) {
+      width: 100%;
+      max-width: 400px;
+      margin: auto;
+    }
+    &:hover {
+      box-shadow: -2px 0 24px rgba(78, 90, 254, 0.3);
+    }
+    h3 {
+      text-align: center;
+      margin: 85px 0 24px 0;
+      width: 100%;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 31px;
+    }
+  }
+  &_content {
+    margin-bottom: 70px;
+    ul {
+      &:not(:first-of-type) {
+        margin-top: 40px;
+      }
+    }
+  }
+  &_list-heading {
+    margin-bottom: 8px;
+  }
+  .styled-list {
+    list-style-type: none;
+    li {
+      font-size: 16px;
+      line-height: 19px;
+      color: $text-color-1;
+      margin: 16px 0;
+      &:before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        background-color: $theme-color-1;
+        margin-right: 8px;
+        margin-bottom: 2px;
+        display: inline-block;
+      }
+    }
+  }
+  .btn {
+    margin-top: auto;
+    @media (max-width: $md-max) {
+      width: 100%;
+      max-width: 230px;
+    }
+  }
+  &_footnote {
+    font-size: 14px;
+    line-height: 24px;
+    color: #86858A;
+    opacity: 0.7;
+
+    max-height: 50px;
+    min-height: 50px;
+    margin-top: 24px;
+
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,19 @@
+button {
+  &.like-true,
+  &.like-false {
+    border: none;
+    cursor: pointer;
+  }
+  &:hover {
+    filter: grayscale(90%);
+  }
+}
+
+.like-false {
+  background: linear-gradient(91.74deg, #4E5AFE 7.6%, #00F2FF 94.18%);
+  border-radius: 100%;
+}
+
+.like-true {
+  background: transparent;
+}

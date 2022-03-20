@@ -1,0 +1,48 @@
+@import "../../../../../styles/grid.scss";
+@import "../../../../../variables.scss";
+
+.info_wrap {
+    margin: 100px 32px 0 32px;
+    @media(min-width: $md-min) {
+        max-width: 55%;
+    }
+}
+.title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    color: $heading-color;
+    margin: 0 0 24px 0;
+}
+.booking_number {
+    font-size: 16px;
+    line-height: 26px;
+    color: $text-color-1;
+    margin: 0 0 18px 0;
+    span {
+        text-decoration-line: underline;
+        color: $theme-color-1;
+        cursor: pointer;
+    }
+}
+.description {
+    font-size: 16px;
+    line-height: 26px;
+    color: $text-color-1;
+    margin: 0 0 70px 0;
+}
+.send_to_email {
+    font-size: 16px;
+    line-height: 26px;
+    text-decoration-line: underline;
+    color: $theme-color-1;
+    margin: 0 0 20px 0;
+    cursor: pointer;
+}
+.help {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+    color: $text-color-1;    
+}

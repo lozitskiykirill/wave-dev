@@ -1,0 +1,520 @@
+/* You can add global styles to this file, and also import other style files */
+
+/** theme colors */
+//$theme-border-1: #414950;
+$theme-color-1 : #4E5AFE;
+$theme-color-2 : #2abff9;
+$theme-color-2-gradient : #00F2FF;
+
+$background-color-1: #fff;
+$background-color-2: #f6f7fb;
+$chat-background-color: #f1f1ff;
+
+/** color text */
+$text-color-1: #86858A; // by default
+$text-color-2: #86858A;
+$text-color-3: #fff;
+$feedback-remove-button: #FF3D00;
+$feedback-remove-button-hover: #FF6302;
+
+/** color border */
+$border-color-1: #C4C4C4; // by default
+$border-button-gradient: #40DDF1;
+$feedback-border-bottom: rgba(23, 20, 59, 0.4);
+
+/** color heading */
+$heading-color: #17143B;
+
+$box-shadow-1: 0 0 18px rgba(78, 90, 254, 0.16);
+
+$chat-box-shadow: 0px 0px 2px #b1b3d9;
+
+/** color messages */
+$color-warning : #d52527;
+$color-error : #c80a47;
+$color-success : #227b00;
+
+/** chat scrollbar colors */
+$sb-track: #f1f1f1;
+$sb-thumb: #d0d0d0;
+$sb-thumg: #afafaf;
+
+$dropdown-hover-color: #edefff;
+
+$header-height: 100px;
+
+$font-family-main: 'Raleway';
+
+@mixin font-bold {
+  font-family: $font-family-main;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: $heading-color;
+}
+@mixin font-normal {
+  font-family: $font-family-main;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: $text-color-1;
+}
+@mixin font-light {
+  font-family: $font-family-main;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: $text-color-1;
+}
+@mixin font-light-header {
+  font-family: $font-family-main;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: $heading-color;
+}
+
+@mixin font_h3-header {
+  font-family: $font-family-main;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: $heading-color;
+}
+@mixin font_h2-header {
+  font-family: $font-family-main;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 35px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+@mixin pagination-style {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+//dropdown-arrow
+@mixin arrow-down {
+  width: 11px;
+  height: 6.5px;
+}
+@mixin dropdown-menu {
+  position: relative;
+  &_current {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: $heading-color;
+    padding: 10px 10px 10px 0;
+    .dropdown-placeholder {
+      padding-top: 4px;
+
+      @include font-bold;
+
+      font-weight: 600;
+      width: 110px;
+      border-bottom: .5px solid #86858A;
+      position: relative;
+      img {
+        @include arrow-down;
+        position: absolute;
+        //right: 0;
+        right: -5px;
+        top: 7px;
+      }
+    }
+    .dropdown-placeholder:hover {
+      cursor: pointer;
+    }
+  }
+  &_dropdown {
+    box-shadow: 0 0 18px rgba(78, 90, 254, 0.16);
+    border-radius: 6px;
+    padding-bottom: 32px;
+    background-color: $background-color-1;
+    overflow: hidden;
+    position: absolute;
+    z-index: 55;
+    visibility: hidden;
+    opacity: 0;
+    top: 60px;
+    transition: 0.3s;
+  }
+  &:hover {
+    .search-filter_list_dropdown {
+      visibility: visible;
+      opacity: 1;
+      //top: 25px;
+      top: 60px;
+    }
+  }
+  li {
+    width: 120px;
+    display: block;
+    list-style-type: none;
+    padding: 8px 16px;
+    background-color: $background-color-1;
+    cursor: pointer;
+    a {
+      //font-weight: 600;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.03em;
+      color: $text-color-2;
+    }
+    .section:hover .layer {
+      border: 2px solid #F90;
+    }
+    &:hover {
+      background-color: rgb(236,239,244);
+      a {
+        color: $heading-color;
+      }
+    }
+    &:hover a {
+      text-decoration: none;
+      background: linear-gradient(#4E5AFE, #00F2FF
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &:active {
+      background-color: rgb(237,239,255);
+    }
+  }
+}
+
+
+
+
+
+@mixin rating-box-main_styles {
+  background-color: $theme-color-2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+
+  color: $text-color-3;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+
+  position: absolute;
+  right: -8px;
+  top: 24px;
+  z-index: 50;
+}
+:host(.rating25) {
+    @media (max-width: 1200px) {
+      display: block;
+      background-color: #FF9900;
+      top:25px;
+    }
+}
+
+@mixin rating-box-styles-left {
+  width: 165px;
+  left: -8px;
+  @media (max-width: 1200px) {
+    top: 25px;
+  }
+  span {
+    margin: 0 auto;
+    padding: 7px 0;
+    @include font-normal;
+    color: white;
+  }
+}
+@mixin rating-box-main_styles-after {
+  content: "";
+    display: block;
+    right: 0;
+    border: 3px solid transparent;
+    border-top: 2px solid #11a0d8;
+    border-left: 5px solid #11a0d8;
+    position: absolute;
+    bottom: -5px;
+}
+@mixin rating-box-main_styles-after-left {
+  content: "";
+  display: block;
+  left: 0;
+  border: 3px solid transparent;
+  border-top: 2px solid #11a0d8;
+  border-right: 5px solid #11a0d8;
+  position: absolute;
+  bottom: -5px;
+}
+
+
+@mixin dropdown-menu-on-focus {
+  position: relative;
+  &_current {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: $heading-color;
+    padding: 10px 10px 10px 0;
+    .dropdown-placeholder {
+      padding-top: 4px;
+
+      @include font-bold;
+
+      width: 110px;
+      border-bottom: .5px solid #86858A;
+      position: relative;
+      img {
+        @include arrow-down;
+        position: absolute;
+        //right: 0;
+        right: -5px;
+        top: 7px;
+      }
+    }
+    .dropdown-placeholder:hover {
+      cursor: pointer;
+    }
+  }
+  &_dropdown {
+    box-shadow: 0 0 18px rgba(78, 90, 254, 0.16);
+    border-radius: 6px;
+    padding-bottom: 32px;
+    background-color: $background-color-1;
+    overflow: hidden;
+    position: absolute;
+    z-index: 55;
+    visibility: hidden;
+    opacity: 0;
+    top: 60px;
+    transition: 0.3s;
+  }
+  &:hover {
+    .search-filter_list_dropdown {
+      visibility: visible;
+      opacity: 1;
+      //top: 25px;
+      top: 60px;
+    }
+  }
+  li {
+    width: 120px;
+    display: block;
+    list-style-type: none;
+    padding: 8px 16px;
+    background-color: $background-color-1;
+    cursor: pointer;
+    a {
+      //font-weight: 600;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.03em;
+      color: $text-color-2;
+    }
+    .section:hover .layer {
+      border: 2px solid #F90;
+    }
+    &:hover {
+      background-color: rgb(236,239,244);
+      a {
+        color: $heading-color;
+      }
+    }
+    &:hover a {
+      text-decoration: none;
+      background: linear-gradient(#4E5AFE, #00F2FF
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &:active {
+      background-color: rgb(237,239,255);
+    }
+  }
+}
+
+@mixin custom-inputs {
+  width: 100%;
+  border-style: none none solid none;
+  border-bottom: 1px solid $border-color-1;
+  background-color: transparent;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  outline: none;
+  color: $heading-color;
+  padding-left: 0;
+  padding-right: 0;
+  &::placeholder {
+    color: $heading-color;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    outline: none;
+  }
+}
+
+@mixin input_checkbox_radio {
+  $url:"assets/images/icons/checkbox.svg";
+  height: 21px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  input[type=checkbox] {
+      position: absolute;
+      z-index: 1;
+      opacity: 0;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      & + label {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 21px;
+          letter-spacing: 0.01em;
+          color: $heading-color;
+          display: flex;
+          align-items: center;
+      }
+      & + label::before {
+          content: "";
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          flex-shrink: 0;
+          flex-grow: 0;
+          border: 1px solid #b4b4b8;
+          border-radius: 2px;
+          margin-right: 8px;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: 70% 70%;
+      }
+      &:checked + label::before {
+          border-color: #4f5afe;
+          background-color: #4f5afe;
+          background-image: url($url);
+      }
+  }
+  input[type=radio] {
+      position: absolute;
+      z-index: 1;
+      opacity: 0;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      & + label {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 21px;
+          letter-spacing: 0.01em;
+          color: $heading-color;
+          display: flex;
+          align-items: center;
+      }
+      & + label::before {
+          content: " ";
+          display: inline-block;
+          position: relative;
+          margin: 0 8px 0 0;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          border: 0.5px solid #86858A;
+          background-color: transparent;
+      }
+      &:checked + label::after {
+          content: " ";
+          border-radius: 10px;
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          top: 6px;
+          left: 6px;
+          display: block;
+          background: #4f5afe;
+      }
+  }
+}
+@mixin checkbox_custom_switch {
+  label {
+    display: inline-block;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  label i {
+    position: relative;
+    display: inline-block;
+    margin-right: .5rem;
+    width: 44px;
+    height: 21px;
+    background-color: #e6e6e6;
+    border-radius: 23px;
+    vertical-align: text-bottom;
+    transition: all 0.3s linear;
+  }
+  label i::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 17px;
+    background-color: #fff;
+    border-radius: 11px;
+    transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
+    transition: all 0.25s linear;
+  }
+  label i::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
+    transform: translate3d(2px, 2px, 0);
+    transition: all 0.2s ease-in-out;
+  }
+  label:active input:checked + i::after { transform: translate3d(16px, 2px, 0); }
+  label input { display: none; }
+  label input:checked + i { background-color: $theme-color-1; }
+  label input:checked + i::before { background-color: $theme-color-1; }
+  label input:checked + i::after { transform: translate3d(25px, 2px, 0); }
+}

@@ -1,0 +1,111 @@
+@import "../../../../../styles/grid.scss";
+@import "../../../../../variables.scss";
+.title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.01em;
+    color: $heading-color;
+    margin: 32px 32px 20px 32px;
+    span {
+        color: $theme-color-1;
+        font-size: 28px;
+        line-height: 33px;
+    }
+}
+.progress_bar {
+    height: 70px;
+    background-color: $text-color-1;
+    margin: 0 32px 50px 32px;
+}
+.page_head {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    margin: 0 0 20px 0;
+}
+.base_wrap {
+    display: flex;
+    margin: 0 32px;
+}
+.base_left {
+    width: 50%;
+}
+.title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: $text-color-1;
+    margin: 0 0 20px 0;
+}
+.description {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    margin: 0 0 26px 0;
+}
+.checkbox {
+    margin: 0 0 20px 0;
+    @include input_checkbox_radio;
+    label {
+        font-weight: 500 !important;
+        font-size: 16px !important;
+        line-height: 19px !important;
+        letter-spacing: 0.01em !important;
+        color: $text-color-1 !important;
+    }
+}
+.input {
+    display: flex;
+    flex-direction: column;
+    label {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.01em;
+        margin: 0 0 4px 0;
+    }
+    input {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid $border-color-1;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.01em;
+        color: $heading-color;
+        width: 440px;
+    }
+}
+.base_right {
+    width: 50%;
+    display: flex;
+}
+.card {
+    max-width: 270px;
+    width: 100%;
+    height: fit-content;
+    padding: 16px 28px 18px 16px;
+    display: flex;
+    box-shadow: $box-shadow-1;
+    border-radius: 8px;
+    &:first-of-type{
+        margin: 0 28px 0 0;
+    }
+}
+.card_icon {
+    margin: 0 10px 0 0;
+    width: 30px;
+}
+.card_text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    min-height: 220px;
+    span {
+        font-weight: bold;
+    }
+}

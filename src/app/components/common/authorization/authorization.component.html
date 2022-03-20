@@ -1,0 +1,49 @@
+<div class="auth" [ngClass]="isActive ?  'auth_show' : 'auth_hide'">
+    <div class="auth_title">
+        <div class="title">Авторизация</div>
+        <img (click)="activate()" src="../../../../assets/images/icons/close.svg" alt="close">
+    </div>
+    <div class="auth_social">
+        <div class="social_title">
+            Войти через
+        </div>
+        <div class="social_blocks">
+            <a href="#" class="social_item"><img src="../../../../assets/images/icons/google.svg" alt="google"></a>
+            <a href="#" class="social_item"><img src="../../../../assets/images/icons/facebook.svg" alt="facebook"></a>
+            <a href="#" class="social_item"><img src="../../../../assets/images/icons/apple.svg" alt="apple"></a>
+        </div>
+    </div>
+    <form action="">
+    <div class="auth_main">
+        <div class="main_inputs">
+            <div class="input_item">
+                <label for="login_email">Адрес электронной почты</label>
+                <input type="email" name="email" id="login_email">
+            </div>
+            <div class="input_item">
+                <label for="login_password">Пароль</label>
+                <input [type]="isPasswordShow ? 'text' : 'password'" name="password" id="login_password">
+                <img (click)="showPassword()" [ngClass]="isPasswordShow ? 'show_eye' : 'hide_eye'" src="../../../../assets/images/icons/close-pass.svg" alt="close password">
+            </div>
+        </div>
+        <div class="main_addition">
+            <div class="addition_remember_me">
+                <input type="checkbox" name="remember_me" id="remember_me">
+                <label for="remember_me"> Запомнить меня</label>
+            </div>
+            <div class="forgot_password">
+                <a href="#">Забыли пароль?</a>
+            </div>
+        </div>
+    </div>
+    </form>
+    <div class="auth_button">
+        <button class="btn btn-default" type="submit" (click)="login()">
+          <span>Войти</span>
+        </button>
+    </div>
+    <div class="auth_reg">
+        <div class="reg">Нет аккаута? <a [routerLink]="['/reg-type']" (click)="activate()">Зарегистрироваться</a></div>
+    </div>
+</div>
+<div class="auth_background" [ngClass]="isActive ? 'auth_background_show' : 'auth_background_hide'"></div>

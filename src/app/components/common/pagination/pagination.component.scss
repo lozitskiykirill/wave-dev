@@ -1,0 +1,49 @@
+@import "../../../../variables";
+.pagination {
+  width: 200px;
+  margin: 50px auto 0 auto;
+  .pagination-list {
+    display: flex;
+    justify-content: center;
+    li {
+      //@include pagination-style;
+      //padding: 8px;
+      a {
+        @include pagination-style;
+        padding-right: 8px;
+        color: #9a9a9e;
+      }
+      a:hover {  // active
+        //position: relative;
+        ////transform: scale(1,2);
+        //color: #9a9a9e;
+        //text-decoration: underline;
+      }
+    }
+    li {
+      &:hover {
+        transform: scale(1.12);
+      }
+      &:hover a {
+        position: relative;
+        color: blue;
+        text-decoration: underline;
+        background: linear-gradient(#f6f7fb, #f6f7fb);
+        -webkit-background-clip: unset;
+        -webkit-text-fill-color: unset;
+      }
+    }
+
+
+
+
+
+    //li a:hover {  // active
+    //  position: relative;
+    //  //transform: scale(1,2);
+    //  color: rgba(78, 90, 254, 1);
+    //  text-decoration: underline;
+    //}
+  }
+}
+

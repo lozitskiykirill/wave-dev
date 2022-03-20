@@ -1,0 +1,208 @@
+@import "styles/grid";
+@import "variables";
+
+.home-heading {
+  max-width: 570px;
+  margin-top: 68px;
+  &.text-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h2 {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: 0.01em;
+    color: $heading-color;
+
+    margin: 12px 0 20px 0;
+  }
+  .home-subtitle {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: $text-color-1;
+
+    margin: 4px 0 60px 0;
+  }
+}
+
+.home-search-block {
+  background-color: $background-color-1;
+  box-shadow: $box-shadow-1;
+  padding: 35px 45px 0 45px;
+  margin-top: -130px;
+  position: relative;
+  z-index: 10;
+
+  &_info {
+    display: flex;
+    justify-content: flex-start;
+
+    margin-bottom: 40px;
+
+    .home-search-block_weather {
+      display: flex;
+      align-items: center;
+      div:first-child {
+        position: relative;
+        top: 3px;
+      }
+      div:nth-child(2) {
+        margin-right: 15px;
+        margin-left: 10px;
+        font-family: Raleway;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 42px;
+        letter-spacing: 0.01em;
+        text-align: left;
+        color: #17143B;
+        position: relative;
+      }
+      div:nth-child(2)::after {
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        top: 10px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        border: 1px #17143B solid;
+      }
+
+      div:last-child {
+        display: flex;
+        flex-direction: column;
+        font-family: Raleway;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        text-align: left;
+        color: #17143B;
+
+        span:last-child {
+          color: #86858A;
+          padding-top: 4px;
+        }
+      }
+    }
+  }
+  &_weather {
+    margin-left: 60px;
+  }
+}
+
+.home-facilities_arrows {
+  min-height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: -40px;
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: relative;
+    left: 0;
+    right: 0;
+  }
+  .swiper-button-next {
+    margin-left: 30px;
+  }
+}
+
+.upcoming-events {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  @media (max-width: $md-max) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+  }
+  @media (max-width: $xs-max) {
+    grid-template-columns: 1fr;
+  }
+  app-upcoming-activity {
+    display: flex;
+    flex-direction: column;
+    &:first-of-type {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+    }
+  }
+  &_inner {
+    height: 100%;
+  }
+}
+
+.home-pop-activities,
+.home-facilities {
+  &_arrows {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &_prev,
+  &_next {
+    position: relative;
+    left: 0;
+    right: 0;
+    &:after {
+      display: none;
+    }
+  }
+  &_next {
+    margin-left: 30px;
+  }
+  swiper {
+    padding: 0 10px;
+    margin: 0 -10px;
+  }
+  &_wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    @media (max-width: $md-max) {
+      flex-direction: column-reverse;
+    }
+  }
+  &_menu {
+    min-width: 400px;
+    padding-right: 30px;
+    @media (max-width: $md-max) {
+      min-width: unset;
+      padding-right: 0;
+      margin-top: 30px;
+    }
+    li {
+      padding-bottom: 0;
+      margin-bottom: 30px;
+      list-style-type: none;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      a {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.01em;
+        color: $text-color-1;
+        transition: 0.2s;
+        &:hover {
+          color: $theme-color-1;
+        }
+      }
+    }
+  }
+  &_slider {
+    width: 1470px;
+    @media (max-width: $md-max) {
+      width: calc(100vw + 200px);
+    }
+  }
+}

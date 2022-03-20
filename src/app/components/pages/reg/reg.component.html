@@ -1,0 +1,147 @@
+<div class="page-container">
+  <div class="container">
+    <div class="reg">
+
+      <div class="reg_title">
+        <h1>Регистрация</h1>
+      </div>
+
+      <div class="reg_form">
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+          <div class="reg_form-column column-first">
+
+            <div class="reg_control-group">
+              <label for="firstName">Имя</label>
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                formControlName="firstName"
+                placeholder="Иван">
+<!--              <div>-->
+<!--                Please enter valid name !-->
+<!--              </div>-->
+            </div>
+
+            <div class="reg_control-group">
+              <label for="lastName">Фамилия</label>
+              <input type="text"
+                     name="lastName"
+                     id="lastName"
+                     formControlName="lastName"
+                     placeholder="Иванов">
+<!--              <div>-->
+<!--                Please enter valid Last Name !-->
+<!--              </div>-->
+            </div>
+
+            <div class="reg_control-group telephone">
+              <div class="">
+                <label for="phoneCode">Код</label>
+                <input type="text"
+                       name="phoneCode"
+                       id="phoneCode"
+                       formControlName="phoneCode"
+                       placeholder="+380">
+              </div>
+              <div class="">
+                <label for="phone">Телефон</label>
+                <input type="text"
+                       name="phone"
+                       id="phone"
+                       formControlName="phone"
+                       placeholder="63 762 45 98">
+              </div>
+            </div>
+
+            <div class="reg_control-group">
+              <label for="email">Адрес электронной почты</label>
+              <input type="text"
+                     name="email"
+                     formControlName="email"
+                     placeholder="ivanov90@gmail.com"
+                     id="email">
+            </div>
+          </div>
+          <div class="reg_form-column column-second">
+
+            <div class="reg_control-group password-group">
+              <label for="password">Пароль</label>
+              <input class="password-stars" type="password"
+                     [type]="blinkingPassword ? 'text' : 'password'"
+                     name="password"
+                     id="password"
+                     formControlName="password"
+                     value="12345678"
+                     placeholder="">
+              <img class="my_class" (click)="clickEvent()"
+                   [ngClass]="statusPass ? 'success' : 'danger'" src="../../../../assets/images/icons/close-pass.svg" alt="">
+              <img class="my_class-hide" (click)="clickEvent()"
+                   [ngClass]="statusPass ? 'danger' : 'success'" src="../../../../assets/images/icons/show-pass.svg" alt="">
+            </div>
+
+            <div class="reg_control-group password-group">
+              <label for="passwordConfirm">Подтвердите пароль</label>
+              <input class="password-stars" type="password"
+                     [type]="blinkingPasswordConfirm ? 'text' : 'password'"
+                     name="passwordConfirm"
+                     formControlName="passwordConfirm"
+                     id="passwordConfirm"
+                     value="12345678"
+                     placeholder="">
+              <img class="my_class" (click)="clickEvent2()"
+                   [ngClass]="statusPassConf ? 'success' : 'danger'" src="../../../../assets/images/icons/close-pass.svg" alt="">
+              <img class="my_class-hide" (click)="clickEvent2()"
+                   [ngClass]="statusPassConf ? 'danger' : 'success'" src="../../../../assets/images/icons/show-pass.svg" alt="">
+            </div>
+
+            <div class="reg_social">
+              <div class="reg_social-title">
+                или Зарегистрироваться через
+              </div>
+              <div class="reg_social-icons">
+                <div class="reg_social-button">
+                  <img src="../../../../assets/images/icons/reg-icon-google.png" alt="">
+                  <span>Google</span>
+                </div>
+                <div class="reg_social-button">
+                  <img src="../../../../assets/images/icons/reg-icon-facebook.png" alt="">
+                  Facebook
+                </div>
+                <div class="reg_social-button">
+                  <img src="../../../../assets/images/icons/reg-icon-apple.png" alt="">
+                  Apple
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-button">
+            <button class="btn btn-default btn-reg" routerLink="/reg-done">
+              <span>Зарегистрироваться</span>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="reg_bottom-links">
+        <a href="#" class="reg_exist-account">Уже есть аккаунт?</a>
+        <a href="#" class="reg_sign-in">Войти</a>
+      </div>
+      <div class="reg_terms">
+        <input class="custom-checkbox" type="checkbox" id="terms" name="terms" checked>
+        <label for="terms">Я соглашаюсь с Условиями использования и Политикой конфиденциальности</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

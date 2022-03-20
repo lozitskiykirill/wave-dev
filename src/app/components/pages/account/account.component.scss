@@ -1,0 +1,95 @@
+@import "../../../../styles/grid.scss";
+@import "../../../../variables.scss";
+.page-box {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.mobile_burger {
+    display: none;
+    @media(max-width: $xs-max) {
+        display: block;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        cursor: pointer;
+    }
+}
+.aside {
+    max-width: 270px;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid $theme-color-1;
+    padding: 90px 20px 0 30px;
+    background-color: $background-color-1;
+    transition: 0.5s;
+    @media(max-width: $sm-max) {
+        padding: 50px 20px 0 30px;
+    }
+    @media(max-width: $xs-max) {
+        padding: 50px 20px 0 20px;
+        position: absolute;
+        z-index: 50;
+        height: 100%;
+        width: 60%;
+        left: -100%;
+    }
+}
+.aside_close {
+    display: none;
+    @media(max-width: $xs-max) {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 20px;
+        cursor: pointer;
+    }
+}
+.aside_links_wrap {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    @media(max-width: $sm-max) {
+        align-items: center;
+    }
+    @media(max-width: $xs-max) {
+        align-items: flex-start;
+    }
+}
+.aside_link {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: $text-color-1;
+    display: flex;
+    align-items: center;
+    margin: 0 0 30px 0;
+    img {
+        margin: 0 12px 0 0;
+    }
+    @media(max-width: $sm-max) {
+        font-size: 0px;
+        justify-content: center;
+    }
+    @media(max-width: $xs-max) {
+        font-size: 14px;
+    }
+}
+.active_link {
+    color: $theme-color-1;
+}
+.main_wrap {
+    margin: 90px 30px 30px 30px;
+    width: 100%;
+    position: relative;
+    @media(max-width: $sm-max) {
+        margin: 80px 20px 20px 30px;
+    }
+}
+.mobile_menu_active{
+    left: 0;
+}

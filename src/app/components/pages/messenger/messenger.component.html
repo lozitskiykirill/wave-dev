@@ -1,0 +1,261 @@
+<div class="page-container">
+    <div class="container">
+      <app-breadcrumbs></app-breadcrumbs>
+    </div>
+    <div class="container">
+      <div class="page-box">
+            <div class="mobile_burger" (click)="mobileAside()"><img src="../../../../assets/images/icons/burger.svg" alt=""></div>
+            <div class="msgr_top">
+                <div class="title">Сообщения</div>
+                <div class="sort_by">
+                    <div class="dropdown_sort_by">
+                        По дате
+                        <img class="dropdown-arrow" src="../../../../../assets/images/icons/Arrow.svg" alt="">
+                    </div>
+                    <ul class="dropdown_sort_by_list">
+                        <li>По цене</li>
+                        <li>По популярности</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="msgr_main">
+                <div class="msgr_aside" [ngClass]="isMobileAside ? 'mobile_aside_active' : 'mobile_aside_inactive'">
+                    <div class="mobile_aside">
+                        Сообщения
+                        <img src="../../../../assets/images/icons/close.svg" (click)="mobileAside()" alt="">
+                    </div>
+                    <div class="aside_item aside_item_unread">
+                        <div class="image"><img src="../../../../assets/images/prototype/message_av.png" alt=""> </div>
+                        <div class="base">
+                            <div class="top">
+                                <div class="name">Иванова О.</div>
+                                <div class="time">8:30</div>
+                                <div class="more_butt"><img src="../../../../assets/images/icons/three_dots.svg" alt=""></div>
+                                <ul class="dropdown_aside_list">
+                                    <li>Пожаловаться</li>
+                                    <li>Удалить</li>
+                                </ul>
+                            </div>
+                            <div class="text">Добрый день! Какой-то текст: Поскольку коммерческие предложения носят...</div>
+                        </div>
+                    </div>
+                    <div class="aside_item aside_item_unread">
+                        <div class="image"><img src="../../../../assets/images/prototype/message_av.png" alt=""> </div>
+                        <div class="base">
+                            <div class="top">
+                                <div class="name">Иванова О.</div>
+                                <div class="time">8:30</div>
+                                <div class="more_butt"><img src="../../../../assets/images/icons/three_dots.svg" alt=""></div>
+                                <ul class="dropdown_aside_list">
+                                    <li>Пожаловаться</li>
+                                    <li>Удалить</li>
+                                </ul>
+                            </div>
+                            <div class="text">Добрый день! Какой-то текст: Поскольку коммерческие предложения носят...</div>
+                        </div>
+                    </div>
+                    <div class="aside_item">
+                        <div class="image"><img src="../../../../assets/images/prototype/message_av.png" alt=""> </div>
+                        <div class="base">
+                            <div class="top">
+                                <div class="name">Иванова О.</div>
+                                <div class="time">8:30</div>
+                                <div class="more_butt"><img src="../../../../assets/images/icons/three_dots.svg" alt=""></div>
+                                <ul class="dropdown_aside_list">
+                                    <li>Пожаловаться</li>
+                                    <li>Удалить</li>
+                                </ul>
+                            </div>
+                            <div class="text">Добрый день! Какой-то текст: Поскольку коммерческие предложения носят...</div>
+                        </div>
+                    </div>
+                    <div class="aside_item aside_item_active">
+                        <div class="image"><img src="../../../../assets/images/prototype/message_av.png" alt=""> </div>
+                        <div class="base">
+                            <div class="top">
+                                <div class="name">Иванова О.</div>
+                                <div class="time">8:30</div>
+                                <div class="more_butt"><img src="../../../../assets/images/icons/three_dots.svg" alt=""></div>
+                                <ul class="dropdown_aside_list">
+                                    <li>Пожаловаться</li>
+                                    <li>Удалить</li>
+                                </ul>
+                            </div>
+                            <div class="text">Добрый день! Какой-то текст: Поскольку коммерческие предложения носят...</div>
+                        </div>
+                    </div>
+                    <div class="aside_item">
+                        <div class="image"><img src="../../../../assets/images/prototype/message_av.png" alt=""> </div>
+                        <div class="base">
+                            <div class="top">
+                                <div class="name">Иванова О.</div>
+                                <div class="time">8:30</div>
+                                <div class="more_butt"><img src="../../../../assets/images/icons/three_dots.svg" alt=""></div>
+                                <ul class="dropdown_aside_list">
+                                    <li>Пожаловаться</li>
+                                    <li>Удалить</li>
+                                </ul>
+                            </div>
+                            <div class="text">Добрый день! Какой-то текст: Поскольку коммерческие предложения носят...</div>
+                        </div>
+                    </div>
+                    <div class="aside_item">
+                        <div class="image"><img src="../../../../assets/images/prototype/message_av.png" alt=""> </div>
+                        <div class="base">
+                            <div class="top">
+                                <div class="name">Иванова О.</div>
+                                <div class="time">8:30</div>
+                                <div class="more_butt"><img src="../../../../assets/images/icons/three_dots.svg" alt=""></div>
+                                <ul class="dropdown_aside_list">
+                                    <li>Пожаловаться</li>
+                                    <li>Удалить</li>
+                                </ul>
+                            </div>
+                            <div class="text">Добрый день! Какой-то текст: Поскольку коммерческие предложения носят...</div>
+                        </div>
+                    </div>
+                    <div class="aside_item">
+                        <div class="image"><img src="../../../../assets/images/prototype/message_av.png" alt=""> </div>
+                        <div class="base">
+                            <div class="top">
+                                <div class="name">Иванова О.</div>
+                                <div class="time">8:30</div>
+                                <div class="more_butt"><img src="../../../../assets/images/icons/three_dots.svg" alt=""></div>
+                                <ul class="dropdown_aside_list">
+                                    <li>Пожаловаться</li>
+                                    <li>Удалить</li>
+                                </ul>
+                            </div>
+                            <div class="text">Добрый день! Какой-то текст: Поскольку коммерческие предложения носят...</div>
+                        </div>
+                    </div>
+                    <div class="aside_item">
+                        <div class="image"><img src="../../../../assets/images/prototype/message_av.png" alt=""> </div>
+                        <div class="base">
+                            <div class="top">
+                                <div class="name">Иванова О.</div>
+                                <div class="time">8:30</div>
+                                <div class="more_butt"><img src="../../../../assets/images/icons/three_dots.svg" alt=""></div>
+                                <ul class="dropdown_aside_list">
+                                    <li>Пожаловаться</li>
+                                    <li>Удалить</li>
+                                </ul>
+                            </div>
+                            <div class="text">Добрый день! Какой-то текст: Поскольку коммерческие предложения носят...</div>
+                        </div>
+                    </div>
+                    <div class="aside_item">
+                        <div class="image"><img src="../../../../assets/images/prototype/message_av.png" alt=""> </div>
+                        <div class="base">
+                            <div class="top">
+                                <div class="name">Иванова О.</div>
+                                <div class="time">8:30</div>
+                                <div class="more_butt"><img src="../../../../assets/images/icons/three_dots.svg" alt=""></div>
+                                <ul class="dropdown_aside_list">
+                                    <li>Пожаловаться</li>
+                                    <li>Удалить</li>
+                                </ul>
+                            </div>
+                            <div class="text">Добрый день! Какой-то текст: Поскольку коммерческие предложения носят...</div>
+                        </div>
+                    </div>
+                    <div class="aside_item">
+                        <div class="image"><img src="../../../../assets/images/prototype/message_av.png" alt=""> </div>
+                        <div class="base">
+                            <div class="top">
+                                <div class="name">Иванова О.</div>
+                                <div class="time">8:30</div>
+                                <div class="more_butt"><img src="../../../../assets/images/icons/three_dots.svg" alt=""></div>
+                                <ul class="dropdown_aside_list">
+                                    <li>Пожаловаться</li>
+                                    <li>Удалить</li>
+                                </ul>
+                            </div>
+                            <div class="text">Добрый день! Какой-то текст: Поскольку коммерческие предложения носят...</div>
+                        </div>
+                    </div>
+                    <div class="aside_item">
+                        <div class="image"><img src="../../../../assets/images/prototype/message_av.png" alt=""> </div>
+                        <div class="base">
+                            <div class="top">
+                                <div class="name">Иванова О.</div>
+                                <div class="time">8:30</div>
+                                <div class="more_butt"><img src="../../../../assets/images/icons/three_dots.svg" alt=""></div>
+                                <ul class="dropdown_aside_list">
+                                    <li>Пожаловаться</li>
+                                    <li>Удалить</li>
+                                </ul>
+                            </div>
+                            <div class="text">Добрый день! Какой-то текст: Поскольку коммерческие предложения носят...</div>
+                        </div>
+                    </div>
+                    <div class="aside_item">
+                        <div class="image"><img src="../../../../assets/images/prototype/message_av.png" alt=""> </div>
+                        <div class="base">
+                            <div class="top">
+                                <div class="name">Иванова О.</div>
+                                <div class="time">8:30</div>
+                                <div class="more_butt"><img src="../../../../assets/images/icons/three_dots.svg" alt=""></div>
+                                <ul class="dropdown_aside_list">
+                                    <li>Пожаловаться</li>
+                                    <li>Удалить</li>
+                                </ul>
+                            </div>
+                            <div class="text">Добрый день! Какой-то текст: Поскольку коммерческие предложения носят...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="msgr_window">
+                    <div class="window_bar">
+                        <div class="bar_item bar_item_active">
+                            <div class="bar_item_name">Сообщения пользователей</div>
+                            <div class="bar_item_count">72</div>
+                        </div>
+                        <div class="bar_item">
+                            <div class="bar_item_name">Сообщения Wave</div>
+                            <div class="bar_item_count">45</div>
+                        </div>
+                    </div>
+                    <div class="window_title">Петров Г.</div>
+                    <div class="window_base">
+                        <div class="item_message companion_mes">
+                            <div class="message_profile"><span>ПГ</span></div>
+                            <div class="message_base">Добрый день! Какой-то текст: Поскольку коммерческие предложения носят...
+                                <div class="message_time">18:30</div>
+                                <img class="message_more" src="../../../../assets/images/icons/three_dots_vertical.svg" alt="">
+                                <ul class="message_more_list">
+                                    <li>Удалить</li>
+                                    <li>Заблокировать</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item_message my_mes">
+                            <div class="message_profile"><img src="../../../../assets/images/prototype/message_av.png" alt=""></div>
+                            <div class="message_base">Добрый день! Какой-то текст: Поскольку коммерческие предложения носят...<div class="message_time">18:34</div></div>
+                        </div>
+                        <div class="item_message companion_mes">
+                            <div class="message_profile"><span>ПГ</span></div>
+                            <div class="message_base">Добрый день! Какой-то текст: Поскольку коммерческие предложения носят...
+                                <div class="message_time">18:30</div>
+                                <img class="message_more" src="../../../../assets/images/icons/three_dots_vertical.svg" alt="">
+                                <ul class="message_more_list">
+                                    <li>Удалить</li>
+                                    <li>Заблокировать</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item_message my_mes">
+                            <div class="message_profile"><img src="../../../../assets/images/prototype/message_av.png" alt=""></div>
+                            <div class="message_base">Добрый день! Какой-то текст: Поскольку коммерческие предложения носят...<div class="message_time">18:34</div></div>
+                        </div>
+                    </div>
+                    <div class="window_input">
+                        <input type="text" placeholder="Написать сообщение...">
+                        <img src="../../../../assets/images/icons/send2.svg" alt="">
+                    </div>
+                </div>
+            </div>
+      </div>
+    </div>
+  </div>
+  

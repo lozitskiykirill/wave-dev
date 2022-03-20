@@ -1,0 +1,58 @@
+@import "../../../../../styles/grid.scss";
+@import "../../../../../variables.scss";
+.title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.01em;
+    color: $heading-color;
+    margin: 32px 32px 20px 32px;
+    span {
+        color: $theme-color-1;
+        font-size: 28px;
+        line-height: 33px;
+    }
+}
+.progress_bar {
+    height: 70px;
+    background-color: $text-color-1;
+    margin: 0 32px 50px 32px;
+}
+.page_head {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    padding: 0 32px;
+}
+.page_description {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    margin: 20px 0 50px 0;
+    width: 80%;
+    padding: 0 32px;
+}
+.buttons_wrap {
+    padding: 0 32px;
+    margin: 0 0 200px 0;
+}
+.butt {
+    width: 110px;
+    height: 30px;
+    padding: 0;
+    margin: 0 16px 0 0;
+    span {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.01em;
+    }
+}
+.active_butt {
+    border-color: $border-button-gradient;
+    opacity: 1;
+    span {
+        color: $theme-color-1;
+    }
+}

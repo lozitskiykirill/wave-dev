@@ -1,0 +1,32 @@
+@import "../../../../styles/grid.scss";
+@import "../../../../variables.scss";
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons_wrap {
+    min-width: 210px;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav_next {
+    color: $theme-color-1;
+    text-align: left;
+}
+.nav_prev {
+    color: $text-color-1;
+    text-align: right;
+}
+.nav_buttons {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    user-select: none;
+    min-width: 90px;
+}

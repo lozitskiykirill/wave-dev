@@ -1,0 +1,33 @@
+@import "../../../../styles/grid.scss";
+@import "../../../../variables.scss";
+.page-box {
+    position: relative;
+}
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+.buttons_wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 160px;
+}
+.nav_prev {
+}
+.nav_buttons {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+}
+.nav_next {
+    color: $theme-color-1;
+}
+.no-background {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}

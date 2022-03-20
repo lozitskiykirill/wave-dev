@@ -1,0 +1,179 @@
+<div class="search-filter">
+  <h3>Параметры поиска</h3>
+  <div class="search-filter_wrapper">
+    <div class="search-filter_wrapper-item wrapper-item-left">
+      <div class="search-filter_control search-filter_place">
+        <div class="search-filter_title">
+          Место отдыха
+        </div>
+        <label for="popular-directions"></label>
+        <input class="popular-directions" name="popular-directions" id="popular-directions" type="text"
+               placeholder="{{directionPlaceholder}}">
+        <ul class="search-filter_list_dropdown popular-directions-list">
+          <li class="active direction-default" >
+            <a href="#">Популярные направления</a>
+          </li>
+          <li
+            *ngFor=" let direction of directions, index as i"
+            (click)="setActiveDirection(direction, i)"
+            [class.active]="direction == activeDirectionItem">
+            {{direction.location}}
+          </li>
+        </ul>
+      </div>
+
+      <div class="search-filter_control search-filter_place">
+        <div class="search-filter_title">
+          Активность
+        </div>
+          <label for="activities"></label>
+            <input class="popular-directions" type="text" id="activities" name="activities" placeholder="{{activityTypePlaceholder}}">
+        <ul class="search-filter_list_dropdown popular-directions-list">
+          <li *ngFor=" let activityType of activityTypeList, index as i"
+              (click)="setActiveActivityType(activityType, i)"
+              [class.active]="activityType == activeActivityTypeItem">
+            {{activityType.type}}
+          </li>
+        </ul>
+      </div>
+
+      <div class="search-filter_control search-filter_date">
+        <div class="search-filter_title">
+          Дата
+        </div>
+        <input type="date"
+               value="{{today}}"
+               [defaultValue]="today"
+               placeholder="">
+        <label class="date-label">
+        </label>
+
+      </div>
+      <div class="search-filter_control search-filter_date-time">
+        <div class="search-filter_list">
+          <div class="search-filter_list_current">
+            <span>c</span>
+            <div class="dropdown-placeholder">
+              {{timeStartPlaceholder}}
+              <!--              <img src="../../../../../assets/images/icons/arrow-slider-left.svg" alt="">-->
+              <img class="dropdown-arrow" src="../../../../../assets/images/icons/Arrow.svg" alt="">
+            </div>
+          </div>
+          <ul class="search-filter_list_dropdown">
+            <!--<li class="active">-->
+            <li *ngFor=" let timeStart of timeStartList, index as i"
+                (click)="setTimeStart(timeStart, i)"
+                [class.active]="timeStart == activeTimeStartItem">
+              {{timeStart.time}}
+            </li>
+          </ul>
+        </div>
+        <div class="search-filter_list">
+          <div class="search-filter_list_current">
+            <span>до</span>
+            <div class="dropdown-placeholder">
+              {{timeFinishPlaceholder}}
+              <img class="dropdown-arrow" src="../../../../../assets/images/icons/Arrow.svg" alt="">
+            </div>
+            <!--        <label></label>-->
+            <!--        <input type="text" placeholder="8:00">-->
+          </div>
+          <ul class="search-filter_list_dropdown">
+            <!--<li class="active">-->
+            <li *ngFor=" let timeFinish of timeFinishList, index as i"
+                (click)="setTimeFinish(timeFinish, i)"
+                [class.active]="timeFinish == activeTimeFinishItem">
+                {{timeFinish.time}}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="search-filter_control search-filter_ages">
+        <div class="search-filter_list">
+          <div class="search-filter_list_current">
+            <span>Взрослые</span>
+            <div class="dropdown-placeholder">
+              {{adultNumberPlaceholder}}
+              <!--              <img src="../../../../../assets/images/icons/arrow-slider-left.svg" alt="">-->
+              <img class="dropdown-arrow" src="../../../../../assets/images/icons/Arrow.svg" alt="">
+            </div>
+          </div>
+          <ul class="search-filter_list_dropdown">
+            <li *ngFor=" let adultNumber of adultNumberList, index as i"
+                (click)="setAdultNumber(adultNumber, i)"
+                [class.active]="adultNumber == activeAdultNumberItem">
+              {{adultNumber.option}}
+            </li>
+
+          </ul>
+        </div>
+        <div class="search-filter_list">
+          <div class="search-filter_list_current">
+            <span>Дети</span>
+            <div class="dropdown-placeholder">
+             {{childrenNumberPlaceholder}}
+              <!--              <img src="../../../../../assets/images/icons/arrow-slider-left.svg" alt="">-->
+              <img class="dropdown-arrow" src="../../../../../assets/images/icons/Arrow.svg" alt="">
+            </div>
+          </div>
+          <ul class="search-filter_list_dropdown">
+            <li *ngFor=" let childrenNumber of childrenNumberList, index as i"
+                (click)="setChildrenNumber(childrenNumber, i)"
+                [class.active]="childrenNumber == activeChildrenNumberItem">
+                {{childrenNumber.option}}
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="btn btn-default search-filter-button btn-find">
+      <span>Найти</span>
+    </div>
+    <div class="search-filter_wrapper-item wrapper-item-right">
+      <div class="search-filter_control search-filter_range">
+        <div class="search-filter_title">
+          Ваш бюджет
+        </div>
+        <div class="custom-slider">
+          <ngx-slider class="custom-slider" [(value)]="value" [(highValue)]="highValue" [options]="options"></ngx-slider>
+        </div>
+      </div>
+      <div class="search-filter_control search-filter_parameters">
+        <div class="search-filter_title">
+          Параметры активности
+        </div>
+        <div class="checkbox search-filter_option option-first" *ngFor=" let activityParameter of activityParameterList, index as i">
+          <input class="custom-checkbox" type="checkbox" id="color{{i}}" name="color-{{i}}" value="indigo">
+          <label for="color{{i}}">{{activityParameter.name}}</label>
+        </div>
+      </div>
+
+      <div class="search-filter_control search-filter_distance">
+        <div class="search-filter_title">
+          Расстояние от центра
+        </div>
+        <div class="search-filter_option radio-item option-first" *ngFor="let distance of centerDistanceList, index as i">
+          <input type="radio" id="centerDistance{{i}}" checked name="centerDistance" value="centerDistance{{i}}">
+          <label for="centerDistance{{i}}">{{distance.distance}}</label>
+        </div>
+      </div>
+
+    </div>
+    <div class="search-filter_control search-filter_conditions">
+      <div class="search-filter_title">
+        Удобства
+      </div>
+
+      <div class="search-filter_conditions-wrapper">
+        <div class="checkbox search-filter_option" *ngFor=" let activityOption of activityOptionList, index as i">
+          <input class="custom-checkbox" type="checkbox" id="activityOption{{i}}" name="activityOption{{i}}" value="indigo">
+          <label for="activityOption{{i}}">{{activityOption.option}}</label>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+

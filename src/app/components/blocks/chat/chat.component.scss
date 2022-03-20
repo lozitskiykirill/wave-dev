@@ -1,0 +1,244 @@
+@import "../../../../styles/grid.scss";
+@import "../../../../variables.scss";
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: $sb-track; 
+}
+::-webkit-scrollbar-thumb {
+  background: $sb-thumb;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: $sb-thumg; 
+}
+.chat_wrap {
+  position: relative;
+}
+.chat_background {
+  display: none;
+}
+.chat_background_show {
+  @media (max-width: $sm-max) {
+    display: block;
+    position: fixed;
+    z-index: 90;
+    width: 100%;
+    height: 100%;
+    background-color: $text-color-1;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+  }
+}
+.chat_button {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  img {
+    margin: 32px;
+    max-width: 60px;
+    width: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+.chat_button_show {
+  @media (max-width: $sm-max) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    justify-content: center;
+    z-index: 110;
+  }
+}
+.chat_show {
+  display: flex;
+}
+
+.chat_hide {
+  display: none;
+}
+.chat_window {
+  position: fixed;
+  z-index: 100;
+  height: 80vh;
+  bottom: 32px;
+  right: 32px;
+  max-width: 370px;
+  width: 100%;
+  padding: 14px 24px;
+
+  background: $background-color-1;
+  border: 0.5px solid $border-color-1;
+  box-sizing: border-box;
+  box-shadow: $box-shadow-1;
+  border-radius: 4px;
+
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: $text-color-1;
+  transition: all 0.3s;
+
+  @media (max-width: $sm-max) {
+    position: fixed;
+    max-width: 90vw;
+    max-height: 90vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 30px auto;
+  }
+  form {
+    width: 100%;
+    height: 100%;
+
+    display: grid; 
+    grid-auto-flow: column; 
+    grid-template-rows: 1fr 60px; 
+    gap: 0px 0px; 
+  }
+}
+.chat {
+  max-height: 740px;
+  overflow-y: scroll;
+  padding: 4px 4px 4px 0;
+}
+.bottom_control {
+  border-top: 1px solid $border-color-1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 0 0;
+  width: 100%;
+  textarea {
+    color: $text-color-1;
+    border: none;
+    font-size: 14px;
+    height: 25px;
+    outline: none;
+    resize: none;
+    font-family: Raleway;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+  }
+  textarea:focus {
+    color: $theme-color-1;
+    border-bottom: 1px solid $theme-color-1;
+  }
+  textarea:focus::placeholder {
+    color: $theme-color-1;
+  }
+}
+.bottom_control_left {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.send_button {
+  margin: 0 20px 0 10px;
+}
+.reg_control-group,
+.reg_control-group textarea {
+  width: 100%;
+}
+.fixed_width {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.bottom_control_right {
+  max-width: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user-message {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  margin: 10px 0 0 0;
+  .chat_text {
+    border-radius: 8px 0px 8px 8px;
+    border: 1px solid $border-color-1;
+    background-color: $background-color-1;
+    padding: 12px 22px 12px 20px;
+    margin: 20px 0 0 0;
+    word-break: break-word;
+  }
+  .chat_image {
+    justify-content: flex-end;
+  }
+}
+.provider-message {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 20px 0 0 0;
+  .chat_text {
+    padding: 12px 38px 12px 14px;
+    background-color: $chat-background-color;
+    border-radius: 0px 8px 8px 8px;
+    margin: 20px 0 0 0;
+    word-break: break-word;
+  }
+  .chat_image {
+    justify-content: flex-start;
+  }
+}
+.chat_image {
+  min-width: 56px;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+.show-send-button{
+  opacity: 0.5;
+  cursor: unset;
+}
+.hide-send-button {
+  opacity: 1;
+}
+.smiles-wrapper {
+  background-color: $theme-color-1;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  position: absolute;
+  right: 24px;
+  bottom: 70px;
+  margin: auto;
+  transition: 0.3s;
+  span {
+    color: black;
+    min-width: 50px;
+    min-height: 20px;
+    display: block;
+    text-align: center;
+  }
+}
+.show-smiles {
+  opacity: 1;
+  visibility: visible;
+}
+.hidden-smiles{
+  opacity: 0;
+  visibility: hidden;
+}

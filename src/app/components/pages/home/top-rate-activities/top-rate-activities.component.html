@@ -1,0 +1,26 @@
+<div class="top-rate-activity">
+  <div class="top-rate-activity_image">
+    <img src="{{topRateActivitiesImage}}" alt="">
+  </div>
+  <div class="top-rate-activity_content">
+    <div class="top-rate-activity_heading">
+      <div class="top-rate-activity_title">
+        {{topRateActivitiesIndex}}. {{topRateActivityName}}
+      </div>
+      <app-like-item></app-like-item>
+    </div>
+    <div class="top-rate-activity_middle">
+      <div class="top-rate-activity_address">{{topActivityAddress}}</div>
+      <div class="top-rate-activity_description">{{topRateActivitiesDescription}}</div>
+    </div>
+    <app-rating-box [rating]="topRateActivityRating"></app-rating-box>
+    <div class="top-rate-activity_feedbacks">
+      <a href="#" style="display: block">{{topRateActivitiesFeedbacks}} отзывов</a>
+    </div>
+
+    <a href="/activity" class="btn btn-default top-rate-activity_button">
+      <span>Забронировать</span>
+    </a>
+    <!--<button class="btn btn-defaukt" (click)="onCheader-langlickMe(topRateActivityName)" [ngClass]="step ? 'button1' : 'button'">Click me!</button>-->
+  </div>
+</div>

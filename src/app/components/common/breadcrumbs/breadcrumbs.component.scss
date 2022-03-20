@@ -1,0 +1,22 @@
+@import "../../../../variables";
+.breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 15px 0 40px 0;
+  .breadcrumbs_link img{
+    margin: 0 8px 0 0;
+    max-width: 8px;
+    width: 100%;
+  }
+  .breadcrumbs_current,
+  .breadcrumbs_link {
+    min-width: max-content;
+    padding: 4px 8px 4px 0;
+  }
+  .breadcrumbs_current,
+  .breadcrumbs_link a{
+    @include font-light;
+  }
+}

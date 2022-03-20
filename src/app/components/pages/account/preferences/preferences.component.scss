@@ -1,0 +1,149 @@
+@import "../../../../../styles/grid.scss";
+@import "../../../../../variables.scss";
+.title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.01em;
+    color: $heading-color;
+    margin: 0 0 16px 0;
+}
+.description {
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    margin: 0 0 30px 0;
+}
+.main {
+    margin: 0 0 50px 0;
+    border-top: 1px solid $border-color-1;
+    border-bottom: 1px solid $border-color-1;
+}
+.item_row {
+    display: grid; 
+    grid-template-columns: 30% 40% 30%; 
+    gap: 0px 0px; 
+    min-height: 92px;
+    border-bottom: 1px solid $border-color-1;
+    &:last-child {
+        border: none;
+    }
+}
+.name {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    color: $heading-color;
+    display: flex;
+    align-items: center;
+}
+.item_description {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 5px;
+    img {
+        margin: 0 8px 0 0;
+    }
+}
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+.edit {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: $theme-color-1;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    img {
+        margin: 0 8px 0 0;
+    }
+}
+.remove {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: $feedback-remove-button;
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 20px;
+    cursor: pointer;
+    img {
+        margin: 0 8px 0 0;
+    }
+}
+.show {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: $theme-color-1;
+    cursor: pointer;
+}
+
+.item_edit {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.current {
+    color: $heading-color;
+    display: flex;
+    img{
+        margin: 0 8px;
+    }
+}
+.edit_list {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    padding: 0 0 80px 0;
+    background-color: #fff;
+    box-shadow: $box-shadow-1;
+    border-radius: 8px;
+    z-index: 20;
+    li {
+        min-width: max-content;
+        display: block;
+        list-style-type: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        &:hover {
+            background-color: $background-color-2;
+        }
+    }
+}
+.item_edit:hover .edit_list,
+.edit_list:hover {
+    visibility: visible;
+    opacity: 1;
+}
+.buttons_edit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 8px 0;
+}
+.edit_cancel {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    cursor: pointer;
+}
+.edit_save {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: $theme-color-1;
+    cursor: pointer;
+}

@@ -1,0 +1,55 @@
+<div class="title">
+  Регистрация провайдера: <span>Название и расположение</span>
+</div>
+<div class="progress_bar"></div>
+
+<div class="main_buttons_wrap">
+  <div class="btn button-gradient" (click)="typeObject()" [ngClass]="isRent ? '' : 'active_button'">
+    <span>Объект отдыха</span>
+  </div>
+
+  <div class="btn button-gradient" (click)="typeRent()" [ngClass]="!isRent ? '' : 'active_button'">
+    <span>Центр проката</span>
+  </div>
+</div>
+
+<div class="base_wrap">
+  <div class="base_left">
+    <div class="left_title">{{ current0 }}</div>
+    <div class="left_input" *ngIf="!isRent">
+      <label for="">Тип объекта отдыха</label>
+      <div class="current_object_type">Центр развлечений <img src="../../../../../assets/images/icons/Arrow.svg" alt=""></div>
+      <ul class="object_type_list">
+        <li>Центр развлечений</li>
+        <li>Агроусадьба</li>
+        <li>Страусиное ранчо</li>
+      </ul>
+    </div>
+    <div class="left_input">
+      <label for="">{{ current1 }}</label>
+      <input type="text">
+    </div>
+    <div class="left_input">
+      <label for="">Номер телефона</label>
+      <input type="text">
+    </div>
+  </div>
+  <div class="base_right">
+    <div class="card">
+      <div class="card_icon"><img src="../../../../../assets/images/icons/bulb.svg" alt=""></div>
+      <div class="card_text">
+        - Короткое название легче запоминается <br>
+        - Избегайте аббревиатур
+      </div>
+    </div>
+    <div class="card">
+      <div class="card_icon"><img src="../../../../../assets/images/icons/bulb.svg" alt=""></div>
+      <div class="card_text">
+        Это название будет заголовком вашей страницы на нашем сайте. 
+        Оно должно отражать ваш объект, предоставляемые услуги или 
+        содержать информацию о расположении. Название будет видно 
+        всем посетителям нашего сайта, так что не включайте в него адрес.
+      </div>
+    </div>
+  </div>
+</div>

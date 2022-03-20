@@ -1,0 +1,114 @@
+@import "../../../../../styles/grid.scss";
+@import "../../../../../variables.scss";
+.title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.01em;
+    color: $heading-color;
+    margin: 32px 32px 20px 32px;
+    span {
+        color: $theme-color-1;
+        font-size: 28px;
+        line-height: 33px;
+    }
+}
+.progress_bar {
+    height: 70px;
+    background-color: $text-color-1;
+    margin: 0 32px 50px 32px;
+}
+.page_head {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    margin: 0 0 50px 0;
+    padding: 0 32px;
+}
+.base_wrap {
+    display: flex;
+    margin: 0 32px;
+}
+.base_left {
+    width: 50%;
+}
+.provider-inventory-container {
+}
+.item {
+    height: 80px;
+    border-radius: 8px;
+    box-shadow: $box-shadow-1;
+    width: 80%;
+    padding: 0 24px 0 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 20px 0;
+}
+.item_title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    color: $heading-color;
+    position: relative;
+    &::before {
+        content: " ";
+        width: 8px;
+        height: 8px;
+        background-color: $theme-color-1;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        left: -20px;
+        top: 6px;
+    }
+}
+.item_button {
+    width: 130px;
+    height: 30px;
+}
+.add_button {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: $theme-color-1;
+    margin: 40px 0 0 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    img {
+        margin: 0 8px 0 0;
+    }
+}
+.base_right {
+    width: 50%;
+    display: flex;
+}
+.card {
+    max-width: 270px;
+    width: 100%;
+    height: fit-content;
+    padding: 16px 28px 18px 16px;
+    display: flex;
+    box-shadow: $box-shadow-1;
+    border-radius: 8px;
+    &:first-of-type{
+        margin: 0 28px 0 0;
+    }
+}
+.card_icon {
+    margin: 0 10px 0 0;
+    width: 30px;
+}
+.card_text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    min-height: 220px;
+    span {
+        font-weight: bold;
+    }
+}

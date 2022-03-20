@@ -1,0 +1,60 @@
+<div class="card" >
+
+  <app-rating-box-left *ngIf="card.isPopular"></app-rating-box-left>
+  <app-rating-box [rating]="rating ? rating : 0"></app-rating-box>
+
+
+  <div class="card_image">
+    <img src="{{card.image}}" alt="{{title}}">
+  </div>
+
+  <div class="card_content">
+
+    <div class="card_title">
+      {{title ? title : ""}}
+
+      <span class="like">
+        <app-like-item></app-like-item>
+      </span>
+    </div>
+
+    <div class="card_info">
+      <div class="card_location">
+        {{address ? address : ""}}
+      </div>
+      <div class="card_distance">
+        <img *ngIf="distance" src="../../../../assets/images/icons/pin.svg" alt="">
+        {{distance ? distance : ""}}
+      </div>
+      <div class="card_reviews">
+        <a href="#" title="">{{feedbacks ? feedbacks : 0 }} отзывов</a>
+      </div>
+    </div>
+
+
+    <div class="card_options-list" [ngClass]="isOpened ? 'card-opened' : 'card-closed'">
+
+      <div *ngFor="let cardOption of card.options" class="card_option">
+        <div class="card_type">{{cardOption.name}}</div>
+        <div class="card_number">{{cardOption.number}}</div>
+        <div class="card_price">{{cardOption.price}} грн</div>
+        <a href="/activity" class="btn btn-default btn-card-component">
+          <span>Выбрать</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="card_link-more">
+      <a (click)="showHide()" title="Показать больше вариантов">
+        Показать больше вариантов
+      </a>
+    </div>
+
+  </div>
+
+  <div class="discount" *ngIf="card.sale">
+    Скидка {{ card.sale }}
+  </div>
+
+</div>

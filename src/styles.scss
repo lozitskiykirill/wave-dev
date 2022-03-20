@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@import "styles/reset";
+@import "variables";
+@import "styles/grid";
+@import "styles/fonts";
+@import "styles/typography";
+@import "styles/buttons";
+@import "styles/global";
+
+// @import "~@ng-select/ng-select/themes/default.theme.css";
+//@import "~swiper/swiper";
+//import 'swiper/scss/navigation';
+//import 'swiper/scss/pagination';
+
+/* Importing Bootstrap SCSS file. */
+//@import '~bootstrap/scss/bootstrap';
+
+html, body { height: 100%; }
+body { margin: 0; }
+
+::ng-deep {
+  .ng-option {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: $text-color-1;
+
+    padding: 10px 20px;
+    background-color: rgba(218, 223, 234, 0.5);
+
+    display: none;
+  }
+  & > * {
+    .ng-option {
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.01em;
+      color: $text-color-1;
+
+      padding: 10px 20px;
+      background-color: rgba(218, 223, 234, 0.5);
+    }
+  }
+}

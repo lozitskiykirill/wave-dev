@@ -1,0 +1,42 @@
+.card_page-container {
+  padding-top: 100px;
+  min-height: calc(100vh - 170px);
+  .card-page-wrapper {
+    width: 100%;
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  .card-buttons-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    .btn-card {
+      width: 207px;
+      border: 2px solid #86858A;
+      margin-right: 50px;
+      max-width: 207px;
+      color: #86858A;
+    }
+    .btn-card:hover {
+      background: transparent;
+      border: 2px solid #7de0f8;
+      color: #5c66fe;
+    }
+  }
+}
+//.facilities > img:hover {
+//  //stroke: red;
+//  //fill: red;
+//  //background-color: #227b00;
+//  color: #FF9900;
+//}
+.facilities:hover {
+  //color: green;
+  ////transform: scale(1.2);
+  //stroke: #E6443B;
+  //fill: #E6443B;
+
+  //filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+  filter: invert(12%) sepia(93%) saturate(1352%) hue-rotate(210deg) brightness(119%) contrast(119%);
+}

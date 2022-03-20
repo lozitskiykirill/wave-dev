@@ -1,0 +1,26 @@
+<div class="page-container">
+    <div class="container">
+        <div class="container_wrap">
+            <div class="top_wrap">
+                <div class="title">Избранные активности</div>
+            </div>
+
+            <div class="main_wrap">
+                <div class="item" *ngFor="let item of this.activities.activities">
+                    <div class="img">
+                        <img src="{{ item.image }}" alt="">
+                        <img src="../../../assets/images/icons/remove.svg" alt="">
+                    </div>
+                    <div class="main">
+                        <div class="main_top">
+                            <div class="main_title" [routerLink]="item.link">{{ item.name }}</div>
+                            <div class="main_price" [routerLink]="item.link">от {{ item.price }} грн</div>
+                        </div>
+                        <div class="main_provider" [routerLink]="item.provider_link">{{ item.provider }}</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

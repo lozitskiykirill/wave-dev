@@ -1,0 +1,42 @@
+<div class="page-container">
+  <div class="container">
+    <app-breadcrumbs></app-breadcrumbs>
+  </div>
+  <div class="container">
+    <div class="page-box" [ngClass]="isPageRegProviderType ? 'no-background' : ''">
+      <!-- <app-navigation></app-navigation> -->
+      <app-reg-provider-type *ngIf="isPageRegProviderType"></app-reg-provider-type>
+      <app-reg-type-rental *ngIf="isPageRegTypeRental"></app-reg-type-rental>
+      <app-reg-type-object *ngIf="isPageRegTypeObject"></app-reg-type-object>
+      <app-reg-type-address *ngIf="isPageRegTypeAddress"></app-reg-type-address>
+      <app-reg-location *ngIf="isPageRegLocation"></app-reg-location>
+      <app-reg-location-map *ngIf="isPageRegLocationMap"></app-reg-location-map>
+
+      <app-reg-provider-info-services *ngIf="isPageRegInfoServices"></app-reg-provider-info-services>
+      <app-reg-provider-info-description *ngIf="isPageRegInfoDescription"></app-reg-provider-info-description>
+      <app-reg-provider-info-timetable *ngIf="isPageRegInfoTimetable"></app-reg-provider-info-timetable>
+
+      <app-reg-inventory-add *ngIf="isPageRegInventoryAdd" [providerData]="provider"></app-reg-inventory-add>
+      <app-reg-inventory-type *ngIf="isPageRegInventoryType" [providerData]="provider"></app-reg-inventory-type>
+      <app-reg-inventory-price *ngIf="isPageRegInventoryPrice" [providerData]="provider"></app-reg-inventory-price>
+      <app-reg-inventory-cancellation *ngIf="isPageRegInventoryCancellation"></app-reg-inventory-cancellation>
+      <app-reg-inventory-sale *ngIf="isPageRegInventorySale"></app-reg-inventory-sale>
+      <app-reg-inventory-availability *ngIf="isPageRegAvailability"></app-reg-inventory-availability>
+
+      <app-reg-provider-photo *ngIf="isPageRegProviderPhoto"></app-reg-provider-photo>
+
+      <app-reg-provider-legal *ngIf="isPageRegProviderLegal"></app-reg-provider-legal>
+
+      <app-reg-provider-success *ngIf="isPageRegProviderSuccess"></app-reg-provider-success>
+
+
+      <div class="nav" *ngIf="!isPageRegProviderType">
+        <div class="buttons_wrap">
+          <div (click)="prevPage()" class="nav_prev nav_buttons" *ngIf="!isPageRegTypeRental">Назад</div>
+          <div *ngIf="!isPageRegTypeRental">|</div>
+          <div (click)="nextPage()" class="nav_next nav_buttons">Продолжить</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

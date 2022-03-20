@@ -1,0 +1,21 @@
+<div class="page-container">
+  <div class="container">
+    <app-breadcrumbs></app-breadcrumbs>
+  </div>
+  <div class="container">
+    <div class="page-box">
+      <app-navigation></app-navigation>
+      <app-order-time *ngIf="isPageOrderTime"></app-order-time>
+      <app-order-options *ngIf="isPageOrderOptions"></app-order-options>
+      <app-order-payment *ngIf="isPageOrderPayment"></app-order-payment>
+      <app-order-success *ngIf="isPageOrderSuccess"></app-order-success>
+      <div class="nav">
+        <div class="buttons_wrap">
+          <div (click)="prevPage()" class="nav_prev nav_buttons">Назад</div>
+          <div>|</div>
+          <div (click)="nextPage()" class="nav_next nav_buttons">Продолжить</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

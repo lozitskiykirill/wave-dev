@@ -1,0 +1,40 @@
+@import "../../../../../variables";
+
+.show-date-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .number-of-date {
+    margin-right: 12px;
+    font-family: Raleway;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 42px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #17143B;
+  }
+  .something {
+    p {
+      font-family: Raleway;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 14px;
+      letter-spacing: 0.01em;
+      text-align: left;
+      color: #17143B;
+    }
+    span {
+      font-family: Raleway;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 14px;
+      letter-spacing: 0.01em;
+      text-align: left;
+      color: #86858A;
+    }
+  }
+}

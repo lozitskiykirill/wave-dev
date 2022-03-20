@@ -1,0 +1,80 @@
+@import "../../../../../../styles/grid.scss";
+@import "../../../../../../variables.scss";
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+.left_block {
+    flex-basis: 50%;
+    padding: 0 20px 0 0;
+}
+.right_block {
+    flex-basis: 50%;
+}
+.item {
+    margin: 0 0 42px 0;
+}
+.item_title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    margin: 0 0 4px 0;
+}
+.item_main {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    color: $heading-color;
+    outline: none;
+    border: none;
+    border-bottom: 0.5px solid $border-color-1;
+}
+
+.dropdown_gender {
+    width: 100%;
+    max-width: 242px;
+    height: 21px;
+    cursor: pointer;
+    .dropdown-arrow{
+        transform: rotate(0deg);
+        transition: 0.5s;
+        float: right;
+        width: 12px;
+    }
+    &:hover {
+        .dropdown-arrow{
+            transform: rotate(180deg);
+            transition: 0.5s;
+        }
+    }
+}
+.dropdown_gender_list {
+    position: absolute;
+    visibility: hidden;
+    transition: 0.5s;
+    opacity: 0;
+
+    box-shadow: 0 0 18px rgb(78 90 254 / 16%);
+    border-radius: 6px;
+    padding-bottom: 32px;
+    background-color: #fff;
+    li {
+        width: 120px;
+        display: block;
+        list-style-type: none;
+        padding: 8px 16px;
+        background-color: #fff;
+        cursor: pointer;
+        &:hover {
+            background-color: $background-color-2;
+        }
+    }
+}
+.dropdown_gender:hover + .dropdown_gender_list,
+.dropdown_gender_list:hover {
+    visibility: visible;
+    opacity: 1;
+}

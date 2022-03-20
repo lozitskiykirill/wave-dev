@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="uk-UA" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="1980026476133222652" datatype="html">
+        <source>Знайдіть тип відпочинку та активності, найбільш вигідний для Вас!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/pages/home/home-banner/home-banner.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">welcoming message</note>
+        <note priority="1" from="meaning">home title</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
