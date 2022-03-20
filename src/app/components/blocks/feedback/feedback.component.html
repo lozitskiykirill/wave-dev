@@ -28,17 +28,17 @@
   <div class="feedback__center__bottom">
 
     <div class="reply__button">
-      <div *ngIf="respond" (mouseover)="imgReplySrc = '../../../../assets/images/icons/reply-hover.svg'" (mouseout)="imgReplySrc = '../../../../assets/images/icons/reply.svg'">
+      <div *ngIf="respond" (mouseover)="imgReplySrc = 'assets/images/icons/reply-hover.svg'" (mouseout)="imgReplySrc = 'assets/images/icons/reply.svg'">
         <img [src]="imgReplySrc" alt=""> Ответить</div>
     </div>
 
     <div class="edit__button">
-      <div *ngIf="edit" (mouseover)="imgEditSrc = '../../../../assets/images/icons/edit.svg'" (mouseout)="imgEditSrc = '../../../../assets/images/icons/edit.svg'">
+      <div *ngIf="edit" (mouseover)="imgEditSrc = 'assets/images/icons/edit.svg'" (mouseout)="imgEditSrc = 'assets/images/icons/edit.svg'">
         <img [src]="imgEditSrc" alt=""> Редактировать</div>
     </div>
 
     <div class="remove__button">
-      <div *ngIf="delete" (mouseover)="imgCrossSrc = '../../../../assets/images/icons/cross-hover.svg'" (mouseout)="imgCrossSrc = '../../../../assets/images/icons/cross.svg'">
+      <div *ngIf="delete" (mouseover)="imgCrossSrc = 'assets/images/icons/cross-hover.svg'" (mouseout)="imgCrossSrc = 'assets/images/icons/cross.svg'">
         <img [src]="imgCrossSrc" alt=""> Удалить</div>
     </div>
 
@@ -64,7 +64,7 @@
   <div class="feedback__right__bottom">
 
     <div class="like__button">
-      <div (click)="pressLike(liked)" [ngClass]="liked ? 'like-false' : 'like-true'" (mouseover)="imgLikeSrc = '../../../../assets/images/icons/like-hover.svg'" (mouseout)="imgLikeSrc = '../../../../assets/images/icons/like.svg'">
+      <div (click)="pressLike(liked)" [ngClass]="liked ? 'like-false' : 'like-true'" (mouseover)="imgLikeSrc = 'assets/images/icons/like-hover.svg'" (mouseout)="imgLikeSrc = 'assets/images/icons/like.svg'">
         <img [src]="imgLikeSrc" alt="">
         {{feedback.likes}}
       </div>
@@ -72,12 +72,12 @@
 
     <div class="dislike__button">
       <div (click)="pressDislike(disliked)" [ngClass]="disliked ? 'dislike-false' : 'dislike-true'">
-        <img src="../../../../assets/images/icons/dislike.svg" alt="">
+        <img src="assets/images/icons/dislike.svg" alt="">
         {{feedback.dislikes}}
       </div>
     </div>
 
   </div>
-</div>  
+</div>
 
 </div>

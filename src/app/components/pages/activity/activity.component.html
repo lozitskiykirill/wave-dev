@@ -29,7 +29,7 @@
                     <span class="activity_address">{{activity.address}}</span>
                   </div>
                   <div class="inline_block_wrapper">
-                  <span class="location_icon"><img src="../../../../assets/images/icons/pin.svg" alt=""></span>
+                  <span class="location_icon"><img src="assets/images/icons/pin.svg" alt=""></span>
                   <span>4 км от центра</span>
                   </div>
                 </div>
@@ -51,13 +51,13 @@
           <div class="activity-buttons">
 
             <div class="activity-buttons-prev">
-              <img src="../../../../assets/images/icons/arrow-slider-left.svg" alt="<">
+              <img src="assets/images/icons/arrow-slider-left.svg" alt="<">
             </div>
 
             <swiper [config]="configActivityButtonsSlider">
               <ng-template swiperSlide *ngFor="
                 let fares of activityFares">
-              <button class="button-gradient activity_button" [ngClass]="activeButton === fares.id ? 'activeButton' : 'inactiveButton'" 
+              <button class="button-gradient activity_button" [ngClass]="activeButton === fares.id ? 'activeButton' : 'inactiveButton'"
               (click)="this.changeActivityData(fares.id)" data-id="{{fares.id}}">
                 <span>{{fares.name}}</span>
               </button>
@@ -65,9 +65,9 @@
             </swiper>
 
             <div class="activity-buttons-next">
-              <img src="../../../../assets/images/icons/arrow-slider-right.svg" alt=">">
+              <img src="assets/images/icons/arrow-slider-right.svg" alt=">">
             </div>
-            
+
 
           </div>
         </div>
@@ -79,10 +79,10 @@
               <span>Перейти к бронированию</span>
             </div>
 
-            <div class="activity_fares" [class.sale_height]="this.isSale" 
+            <div class="activity_fares" [class.sale_height]="this.isSale"
             [ngClass]="fareActivityStatus ? 'af_show' : 'activity_fares'">
               <div class="fares_sale_title" *ngIf="this.isSale">
-                <img src="../../../../assets/images/icons/sale.svg" alt="">
+                <img src="assets/images/icons/sale.svg" alt="">
               </div>
               <div class="activity_fares_title">
                 Тарифы:
@@ -163,16 +163,16 @@
 
             </div>
           </div>
-          
+
         </div>
-      
+
         <div class="guest_wrap">
           <div class="facilities_title">По мнению гостей:</div>
           <div class="guest-rating-wrapper">
             <div class="" *ngFor="let rate of activity.rating">
 
               <div class="guest_rating_item">
-                
+
                 <div class="guest_rating_name">
                   {{rate.name}}
                 </div>
@@ -215,10 +215,10 @@
           <div class="activity_recent_slider">
               <div class="activity_recent_buttons">
                 <div class="search_prev">
-                  <img src="../../../../assets/images/icons/arrow-slider-left.svg" alt="<">
+                  <img src="assets/images/icons/arrow-slider-left.svg" alt="<">
                 </div>
                 <div class="search_next">
-                  <img src="../../../../assets/images/icons/arrow-slider-right.svg" alt=">">
+                  <img src="assets/images/icons/arrow-slider-right.svg" alt=">">
                 </div>
               </div>
               <swiper [config]="configRecentSlider">

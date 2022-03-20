@@ -5,12 +5,12 @@
 <div class="profile_image">
     <div class="image">
         <input type="file" name="" id="" *ngIf="isEditPic">
-        <img src="../../../../../assets/images/prototype/profile-pic.png" alt="">
+        <img src="assets/images/prototype/profile-pic.png" alt="">
     </div>
-    <div class="edit_image" (click)="editPic()" *ngIf="!isEditPic"><img src="../../../../../assets/images/icons/edit.svg" alt="">Изменить</div>
+    <div class="edit_image" (click)="editPic()" *ngIf="!isEditPic"><img src="assets/images/icons/edit.svg" alt="">Изменить</div>
     <div class="edit_image" (click)="editPic()" *ngIf="isEditPic">Сохранить</div>
 </div>
 <div class="edit_button_wrap">
-    <div class="edit" (click)="edit()" *ngIf="!isEdit"><img src="../../../../../assets/images/icons/edit.svg" alt="">Изменить</div>
+    <div class="edit" (click)="edit()" *ngIf="!isEdit"><img src="assets/images/icons/edit.svg" alt="">Изменить</div>
     <div class="edit" (click)="edit()" *ngIf="isEdit">Сохранить</div>
 </div>

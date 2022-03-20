@@ -12,7 +12,7 @@ export class SavedActivitiesComponent implements OnInit {
   activitiesData = {
     activities: [
       {
-        image: '../../../assets/images/prototype/pop-activity-1.jpg',
+        image: 'assets/images/prototype/pop-activity-1.jpg',
         name: 'Гребля на байдарке',
         provider: 'Центр приключений “Кон-Тики”',
         price: '200',
@@ -20,7 +20,7 @@ export class SavedActivitiesComponent implements OnInit {
         provider_link: '/provider',
       },
       {
-        image: '../../../assets/images/prototype/pop-activity-2.jpg',
+        image: 'assets/images/prototype/pop-activity-2.jpg',
         name: 'Гребля на SUP',
         provider: 'Каяк-Каное Центр',
         price: '400',
@@ -28,7 +28,7 @@ export class SavedActivitiesComponent implements OnInit {
         provider_link: '/provider',
       },
       {
-        image: '../../../assets/images/prototype/pop-activity-3.jpg',
+        image: 'assets/images/prototype/pop-activity-3.jpg',
         name: 'Прогулка на велосипеде',
         provider: 'Porto Riva',
         price: '360',
@@ -36,7 +36,7 @@ export class SavedActivitiesComponent implements OnInit {
         provider_link: '/provider',
       },
       {
-        image: '../../../assets/images/prototype/pop-activity-1.jpg',
+        image: 'assets/images/prototype/pop-activity-1.jpg',
         name: 'Вейкбординг',
         provider: 'Pool&Beach',
         price: '200',
@@ -44,7 +44,7 @@ export class SavedActivitiesComponent implements OnInit {
         provider_link: '/provider',
       },
       {
-        image: '../../../assets/images/prototype/pop-activity-2.jpg',
+        image: 'assets/images/prototype/pop-activity-2.jpg',
         name: 'Гребля на байдарке',
         provider: 'База клуба “Байдарка”',
         price: '400',
@@ -52,7 +52,7 @@ export class SavedActivitiesComponent implements OnInit {
         provider_link: '/provider',
       },
       {
-        image: '../../../assets/images/prototype/pop-activity-3.jpg',
+        image: 'assets/images/prototype/pop-activity-3.jpg',
         name: 'Гребля на байдарке',
         provider: 'Центр приключений “Кон-Тики”',
         price: '360',

@@ -86,7 +86,7 @@ export class RegProviderComponent implements OnInit {
           ],
           images: [
             {
-              src: '../../../assets/images/prototype/top-activity-1.jpg'
+              src: 'assets/images/prototype/top-activity-1.jpg'
             }
           ],
         },
@@ -134,7 +134,7 @@ export class RegProviderComponent implements OnInit {
           ],
           images: [
             {
-              src: '../../../assets/images/prototype/top-activity-1.jpg'
+              src: 'assets/images/prototype/top-activity-1.jpg'
             }
           ],
         },
@@ -182,7 +182,7 @@ export class RegProviderComponent implements OnInit {
           ],
           images: [
             {
-              src: '../../../assets/images/prototype/top-activity-1.jpg'
+              src: 'assets/images/prototype/top-activity-1.jpg'
             }
           ],
         },

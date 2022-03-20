@@ -89,43 +89,43 @@ export class ActivityComponent implements OnInit {
   activityImages = [
     {
       id: 0,
-      name: '../../../../assets/images/prototype/activity-big-1.jpg',
+      name: 'assets/images/prototype/activity-big-1.jpg',
     },
     {
       id: 1,
-      name: '../../../../assets/images/prototype/activity-big-2.jpg',
+      name: 'assets/images/prototype/activity-big-2.jpg',
     },
     {
       id: 2,
-      name: '../../../../assets/images/prototype/activity-big-2.jpg',
+      name: 'assets/images/prototype/activity-big-2.jpg',
     },
     {
       id: 3,
-      name: '../../../../assets/images/prototype/main-photo.jpg',
+      name: 'assets/images/prototype/main-photo.jpg',
     },
     {
       id: 4,
-      name: '../../../../assets/images/prototype/activity-big-1.jpg',
+      name: 'assets/images/prototype/activity-big-1.jpg',
     },
     {
       id: 5,
-      name: '../../../../assets/images/prototype/activity-big-2.jpg',
+      name: 'assets/images/prototype/activity-big-2.jpg',
     },
     {
       id: 6,
-      name: '../../../../assets/images/prototype/main-photo.jpg',
+      name: 'assets/images/prototype/main-photo.jpg',
     },
     {
       id: 7,
-      name: '../../../../assets/images/prototype/activity-big-1.jpg',
+      name: 'assets/images/prototype/activity-big-1.jpg',
     },
     {
       id: 8,
-      name: '../../../../assets/images/prototype/activity-big-2.jpg',
+      name: 'assets/images/prototype/activity-big-2.jpg',
     },
     {
       id: 9,
-      name: '../../../../assets/images/prototype/main-photo.jpg',
+      name: 'assets/images/prototype/main-photo.jpg',
     },
   ];
 
@@ -449,7 +449,7 @@ export class ActivityComponent implements OnInit {
   feedbacks = [
     {
       name: 'Аллахьяр Сайядманеш',
-      image: '../../../assets/images/prototype/userlogo-1.png',
+      image: 'assets/images/prototype/userlogo-1.png',
       date: '28 сентября 2021',
       dislikes: 87,
       likes: 65,
@@ -460,7 +460,7 @@ export class ActivityComponent implements OnInit {
     },
     {
       name: 'Сурело Кирилл',
-      image: '../../../assets/images/prototype/userlogo-2.png',
+      image: 'assets/images/prototype/userlogo-2.png',
       date: '09 сентября 2021',
       dislikes: 87,
       likes: 65,
@@ -472,7 +472,7 @@ export class ActivityComponent implements OnInit {
     },
     {
       name: 'Берестовой Валентин',
-      image: '../../../assets/images/prototype/userlogo-3.png',
+      image: 'assets/images/prototype/userlogo-3.png',
       date: '24 августа 2021',
       dislikes: 1,
       likes: 100,
@@ -486,7 +486,7 @@ export class ActivityComponent implements OnInit {
     },
     {
       name: 'Администрация Кон-Тики',
-      image: '../../../assets/images/icons/avatar.svg',
+      image: 'assets/images/icons/avatar.svg',
       date: '24 августа 2021',
       dislikes: 1,
       likes: 100,
@@ -528,45 +528,45 @@ export class ActivityComponent implements OnInit {
     label: [
       {
         name: "Кофе на территории клуба",
-        image: "./../../../assets/images/icons/activity-options/card-option-coffee.svg",
+        image: "assets/images/icons/activity-options/card-option-coffee.svg",
       },
       {
         name: "Парковка близко к воде",
-        image: "./../../../assets/images/icons/activity-options/card-option-parking.svg",
+        image: "assets/images/icons/activity-options/card-option-parking.svg",
       },
       {
         name: "Место для ночлега",
-        image: "./../../../assets/images/icons/activity-options/card-option-tent.svg",
+        image: "assets/images/icons/activity-options/card-option-tent.svg",
       },
       {
         name: "Персонал говорит на английском языке",
-        image: "./../../../assets/images/icons/activity-options/card-option-eng.svg",
+        image: "assets/images/icons/activity-options/card-option-eng.svg",
       },
     ],
     facilities: [
       {
         name: "бесплатный wi-fi,",
-        icon: "./../../../assets/images/icons/activity-options/wifi.svg",
+        icon: "assets/images/icons/activity-options/wifi.svg",
       },
       {
         name: "кафе,",
-        icon: "./../../../assets/images/icons/activity-options/cafe.svg",
+        icon: "assets/images/icons/activity-options/cafe.svg",
       },
       {
         name: "раздевалка,",
-        icon: "./../../../assets/images/icons/activity-options/hanger.svg",
+        icon: "assets/images/icons/activity-options/hanger.svg",
       },
       {
         name: "туалет,",
-        icon: "./../../../assets/images/icons/activity-options/wc.svg",
+        icon: "assets/images/icons/activity-options/wc.svg",
       },
       {
         name: "душ,",
-        icon: "./../../../assets/images/icons/activity-options/shower.svg",
+        icon: "assets/images/icons/activity-options/shower.svg",
       },
       {
         name: "велопарковка",
-        icon: "./../../../assets/images/icons/activity-options/bycicle.svg",
+        icon: "assets/images/icons/activity-options/bycicle.svg",
       },
     ],
     worktime: [
@@ -637,42 +637,42 @@ export class ActivityComponent implements OnInit {
     function getPopularActivities() {
       let popularActivities = [
         {
-          activity_image: '../../../assets/images/prototype/pop-activity-1.jpg',
+          activity_image: 'assets/images/prototype/pop-activity-1.jpg',
           start_price: 200,
           activity_name: 'событие концертное',
           offers: 17,
         },
         {
-          activity_image: '../../../assets/images/prototype/pop-activity-2.jpg',
+          activity_image: 'assets/images/prototype/pop-activity-2.jpg',
           start_price: 400,
           activity_name: 'велосипед',
           offers: 17,
         },
         {
-          activity_image: '../../../assets/images/prototype/pop-activity-3.jpg',
+          activity_image: 'assets/images/prototype/pop-activity-3.jpg',
           start_price: 200,
           activity_name: 'событие 12222',
           offers: 17,
         },{
-          activity_image: '../../../assets/images/prototype/pop-activity-4.jpg',
+          activity_image: 'assets/images/prototype/pop-activity-4.jpg',
           start_price: 200,
           activity_name: 'событие 12222',
           offers: 17,
         },
         {
-          activity_image: '../../../assets/images/prototype/pop-activity-1.jpg',
+          activity_image: 'assets/images/prototype/pop-activity-1.jpg',
           start_price: 200,
           activity_name: 'событие 12222',
           offers: 17,
         },
         {
-          activity_image: '../../../assets/images/prototype/pop-activity-2.jpg',
+          activity_image: 'assets/images/prototype/pop-activity-2.jpg',
           start_price: 200,
           activity_name: 'событие 12222',
           offers: 17,
         },
         {
-          activity_image: '../../../assets/images/prototype/pop-activity-3.jpg',
+          activity_image: 'assets/images/prototype/pop-activity-3.jpg',
           start_price: 200,
           activity_name: 'банка кетчупа',
           offers: 17,
@@ -708,7 +708,7 @@ export class ActivityComponent implements OnInit {
   }
 
   faresShowHide() {
-    this.fareActivityStatus = !this.fareActivityStatus; 
+    this.fareActivityStatus = !this.fareActivityStatus;
     if (this.fareActivityStatus) {
       this.fareActivityButtonText = 'Свернуть';
     } else {

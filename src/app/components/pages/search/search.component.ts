@@ -79,7 +79,7 @@ export class SearchComponent implements OnInit {
   cardsData = [
     {
       id: 1,
-      image: "../../../assets/images/prototype/top-activity-1.jpg",
+      image: "assets/images/prototype/top-activity-1.jpg",
       title: 'Центр приключений “Кон-Тики”',
       address: "г.Запорожье ул. Глиссерная, 26а",
       distance: '4 км от центра',
@@ -108,7 +108,7 @@ export class SearchComponent implements OnInit {
     },
     {
       id: 2,
-      image: "../../../assets/images/prototype/top-activity-2.jpg",
+      image: "assets/images/prototype/top-activity-2.jpg",
       title: 'Pool&Beach',
       address: "г. Запорожье, ул. Прибрежная автомагистраль, 60б",
       distance: '5 км от центра',

@@ -4,28 +4,28 @@
   </div>
   <div class="container">
     <div class="page-box">
-      <img src="../../../../assets/images/icons/burger.svg" class="mobile_burger" (click)="mobileMenu()" alt="">
+      <img src="assets/images/icons/burger.svg" class="mobile_burger" (click)="mobileMenu()" alt="">
       <div class="aside" [ngClass]="isMobileMenuActive ? 'mobile_menu_active' : 'mobile_menu_inactive'">
-        <img src="../../../../assets/images/icons/close.svg" class="aside_close" (click)="mobileMenu()" alt="">
+        <img src="assets/images/icons/close.svg" class="aside_close" (click)="mobileMenu()" alt="">
         <div class="aside_links_wrap">
           <div (click)="setActivePersonalDataPage()" (click)="mobileMenu()" class="aside_link" [ngClass]="isPersonalDataPage ? 'active_link' : 'inactive_link'">
-            <img *ngIf="!isPersonalDataPage" src="../../../../assets/images/icons/icons-account/person.svg" alt="">
-            <img *ngIf="isPersonalDataPage" src="../../../../assets/images/icons/icons-account/aperson.svg" alt="">Персональные данные</div>
+            <img *ngIf="!isPersonalDataPage" src="assets/images/icons/icons-account/person.svg" alt="">
+            <img *ngIf="isPersonalDataPage" src="assets/images/icons/icons-account/aperson.svg" alt="">Персональные данные</div>
           <div (click)="setActivePreferencesPage()" (click)="mobileMenu()" class="aside_link" [ngClass]="isPreferencesPage ? 'active_link' : 'inactive_link'">
-            <img *ngIf="!isPreferencesPage" src="../../../../assets/images/icons/icons-account/settings.svg" alt="">
-            <img *ngIf="isPreferencesPage" src="../../../../assets/images/icons/icons-account/asettings.svg" alt="">Предпочтения</div>
+            <img *ngIf="!isPreferencesPage" src="assets/images/icons/icons-account/settings.svg" alt="">
+            <img *ngIf="isPreferencesPage" src="assets/images/icons/icons-account/asettings.svg" alt="">Предпочтения</div>
           <div (click)="setActiveSafetyPage()" (click)="mobileMenu()" class="aside_link" [ngClass]="isSafetyPage ? 'active_link' : 'inactive_link'">
-            <img *ngIf="!isSafetyPage" src="../../../../assets/images/icons/icons-account/lock.svg" alt="">
-            <img *ngIf="isSafetyPage" src="../../../../assets/images/icons/icons-account/alock.svg" alt="">Безопасность</div>
+            <img *ngIf="!isSafetyPage" src="assets/images/icons/icons-account/lock.svg" alt="">
+            <img *ngIf="isSafetyPage" src="assets/images/icons/icons-account/alock.svg" alt="">Безопасность</div>
           <div (click)="setActivePaymentDetailsPage()" (click)="mobileMenu()" class="aside_link" [ngClass]="isPaymentDetailsPage ? 'active_link' : 'inactive_link'">
-            <img *ngIf="!isPaymentDetailsPage" src="../../../../assets/images/icons/icons-account/credit-card.svg" alt="">
-            <img *ngIf="isPaymentDetailsPage" src="../../../../assets/images/icons/icons-account/acredit-card.svg" alt="">Платежные данные</div>
+            <img *ngIf="!isPaymentDetailsPage" src="assets/images/icons/icons-account/credit-card.svg" alt="">
+            <img *ngIf="isPaymentDetailsPage" src="assets/images/icons/icons-account/acredit-card.svg" alt="">Платежные данные</div>
           <div (click)="setActiveBusinessPage()" (click)="mobileMenu()" class="aside_link" [ngClass]="isBusinessPage ? 'active_link' : 'inactive_link'">
-            <img *ngIf="!isBusinessPage" src="../../../../assets/images/icons/icons-account/globe.svg" alt="">
-            <img *ngIf="isBusinessPage" src="../../../../assets/images/icons/icons-account/aglobe.svg" alt="">Бизнес-возможности</div>
+            <img *ngIf="!isBusinessPage" src="assets/images/icons/icons-account/globe.svg" alt="">
+            <img *ngIf="isBusinessPage" src="assets/images/icons/icons-account/aglobe.svg" alt="">Бизнес-возможности</div>
           <div (click)="setActiveBusinessPageList()" (click)="mobileMenu()" class="aside_link" [ngClass]="isBusinessPageList ? 'active_link' : 'inactive_link'">
-            <img *ngIf="!isBusinessPageList" src="../../../../assets/images/icons/icons-account/globe.svg" alt="">
-            <img *ngIf="isBusinessPageList" src="../../../../assets/images/icons/icons-account/aglobe.svg" alt="">Бизнес-возможности (list)</div>
+            <img *ngIf="!isBusinessPageList" src="assets/images/icons/icons-account/globe.svg" alt="">
+            <img *ngIf="isBusinessPageList" src="assets/images/icons/icons-account/aglobe.svg" alt="">Бизнес-возможности (list)</div>
         </div>
       </div>
       <div class="main_wrap">

@@ -1,6 +1,6 @@
 <div class="chat_wrap">
 <div class="chat_button" [ngClass]="isActive ? 'chat_button_show' : 'chat_button_hide'">
-  <img src="../../../../assets/images/icons/{{imageButton}}.svg" (click)="chatActive()" alt="chat">
+  <img src="assets/images/icons/{{imageButton}}.svg" (click)="chatActive()" alt="chat">
 </div>
 <div class="chat_window" [ngClass]="isActive ? 'chat_show' : 'chat_hide'">
   <form [formGroup]="chatForm" (ngSubmit)="onSubmit()" autocomplete="off">
@@ -34,8 +34,8 @@
         </div>
 
         <!-- кнопка отправки. Показывается, если 1 символ или больше -->
-          <img [ngClass]="isAnySymbol ? 'hide-send-button' : 'show-send-button'" 
-          (click)=onSubmit() src="../../../../assets/images/icons/send.svg"
+          <img [ngClass]="isAnySymbol ? 'hide-send-button' : 'show-send-button'"
+          (click)=onSubmit() src="assets/images/icons/send.svg"
           class="send_button fixed_width" alt="send">
       </div>
 
@@ -44,7 +44,7 @@
       <div class="bottom_control_right">
 
         <!-- При клике на блок открывается блок в котором будут смайлы -->
-        <img (click)=showSmiles() class="fixed_width" src="../../../../assets/images/icons/smile.svg" alt="smile">
+        <img (click)=showSmiles() class="fixed_width" src="assets/images/icons/smile.svg" alt="smile">
 
         <div class="smiles-wrapper" [ngClass]="isActiveSmile ? 'show-smiles' : 'hidden-smiles'">
           <span>:)</span>
@@ -52,9 +52,9 @@
           <span>;)</span>
           <span>)0_o</span>
         </div>
-      
+
         <!-- Кнопка прикрепить файлы -->
-        <img (click)=attachFile() class="fixed_width" src="../../../../assets/images/icons/file.svg" alt="file">
+        <img (click)=attachFile() class="fixed_width" src="assets/images/icons/file.svg" alt="file">
       </div>
   </div>
 

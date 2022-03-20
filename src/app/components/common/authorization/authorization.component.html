@@ -1,16 +1,16 @@
 <div class="auth" [ngClass]="isActive ?  'auth_show' : 'auth_hide'">
     <div class="auth_title">
         <div class="title">Авторизация</div>
-        <img (click)="activate()" src="../../../../assets/images/icons/close.svg" alt="close">
+        <img (click)="activate()" src="assets/images/icons/close.svg" alt="close">
     </div>
     <div class="auth_social">
         <div class="social_title">
             Войти через
         </div>
         <div class="social_blocks">
-            <a href="#" class="social_item"><img src="../../../../assets/images/icons/google.svg" alt="google"></a>
-            <a href="#" class="social_item"><img src="../../../../assets/images/icons/facebook.svg" alt="facebook"></a>
-            <a href="#" class="social_item"><img src="../../../../assets/images/icons/apple.svg" alt="apple"></a>
+            <a href="#" class="social_item"><img src="assets/images/icons/google.svg" alt="google"></a>
+            <a href="#" class="social_item"><img src="assets/images/icons/facebook.svg" alt="facebook"></a>
+            <a href="#" class="social_item"><img src="assets/images/icons/apple.svg" alt="apple"></a>
         </div>
     </div>
     <form action="">
@@ -23,7 +23,7 @@
             <div class="input_item">
                 <label for="login_password">Пароль</label>
                 <input [type]="isPasswordShow ? 'text' : 'password'" name="password" id="login_password">
-                <img (click)="showPassword()" [ngClass]="isPasswordShow ? 'show_eye' : 'hide_eye'" src="../../../../assets/images/icons/close-pass.svg" alt="close password">
+                <img (click)="showPassword()" [ngClass]="isPasswordShow ? 'show_eye' : 'hide_eye'" src="assets/images/icons/close-pass.svg" alt="close password">
             </div>
         </div>
         <div class="main_addition">

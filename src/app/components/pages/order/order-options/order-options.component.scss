@@ -13,10 +13,10 @@
     justify-content: space-around;
     align-items: center;
     @media(max-width: $sm-max) {
-        display: grid; 
-        grid-auto-columns: 1fr; 
-        grid-template-columns: 1fr 1fr; 
-        gap: 15px 0px; 
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px 0px;
         padding: 20px 16px;
     }
 }
@@ -173,7 +173,7 @@
     }
 }
 .title_wrap {
-    
+
 }
 .title {
     font-weight: 600;
@@ -315,10 +315,10 @@
 .item_main {
     display: flex;
     @media(max-width: $md-max) {
-        display: grid; 
-        grid-auto-columns: 1fr; 
-        grid-template-columns: 1fr 1fr 1fr; 
-        gap: 0px 0px; 
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0px 0px;
     }
 }
 .item_addons {
@@ -369,7 +369,7 @@
     height: 20px;
     cursor: pointer;
   }
-  
+
   /* для элемента label, связанного с .custom-checkbox */
   .custom-checkbox + label {
     display: inline-flex;
@@ -377,7 +377,7 @@
     user-select: none;
     margin: 0 0 5px 0;
   }
-  
+
   /* создание в label псевдоэлемента before со следующими стилями */
   .custom-checkbox + label::before {
     content: '';
@@ -396,27 +396,27 @@
     background-position: center center;
     background-size: 70% 70%;
   }
-  
+
   /* стили при наведении курсора на checkbox */
   .custom-checkbox:not(:disabled):not(:checked) + label:hover::before {
     border-color: rgb(180, 180, 184);
   }
-  
+
   /* стили для активного чекбокса (при нажатии на него) */
   .custom-checkbox:not(:disabled):active + label::before {
     background-color: rgb(79, 90, 254);
     border-color: rgb(180, 180, 184);
   }
-  
+
   /* стили для чекбокса, находящегося в фокусе */
   .custom-checkbox:focus + label::before {
   }
-  
+
   /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
   .custom-checkbox:focus:not(:checked) + label::before {
     border-color: rgb(180, 180, 184);
   }
-  
+
   /* стили для чекбокса, находящегося в состоянии checked */
   .custom-checkbox:checked + label::before {
     border-color: rgb(79, 90, 254);
@@ -425,7 +425,7 @@
     background-image: url("../../../../../assets/images/icons/checkbox.svg");
     //background-image: url("../../../../../assets/images/icons/check-mark.png");
   }
-  
+
   /* стили для чекбокса, находящегося в состоянии disabled */
   .custom-checkbox:disabled + label::before {
     background-color: rgb(79, 90, 254);

@@ -8,10 +8,10 @@ import {Feedback} from "../../../interfaces/Feedback";
 })
 
 export class FeedbackComponent implements OnInit {
-  imgReplySrc:any = '../../../../assets/images/icons/reply.svg';
-  imgEditSrc:any = '../../../../assets/images/icons/edit.svg';
-  imgCrossSrc:any = '../../../../assets/images/icons/cross.svg';
-  imgLikeSrc:any = '../../../../assets/images/icons/like.svg';
+  imgReplySrc:any = 'assets/images/icons/reply.svg';
+  imgEditSrc:any = 'assets/images/icons/edit.svg';
+  imgCrossSrc:any = 'assets/images/icons/cross.svg';
+  imgLikeSrc:any = 'assets/images/icons/like.svg';
 
   @Input() feedbackData!: Feedback;
 

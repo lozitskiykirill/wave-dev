@@ -97,7 +97,7 @@ export class HomeComponent implements OnInit {
     this.popularActivities = getPopularActivities();
 
     function getHomeBannerImage() {
-      let homeBannerImage = '../../../assets/images/prototype/main-photo.jpg';
+      let homeBannerImage = 'assets/images/prototype/main-photo.jpg';
       return homeBannerImage;
     };
     function getHomeBannerText() {
@@ -110,27 +110,27 @@ export class HomeComponent implements OnInit {
         {
           upcomingEventId: 1,
           name: 'событие 12222',
-          image: '../../../assets/images/prototype/upcoming-activity-1.jpg',
+          image: 'assets/images/prototype/upcoming-activity-1.jpg',
         },
         {
           upcomingEventId: 2,
           name: 'событие 2',
-          image: '../../../assets/images/prototype/upcoming-activity-2.jpg',
+          image: 'assets/images/prototype/upcoming-activity-2.jpg',
         },
         {
           upcomingEventId: 3,
           name: 'событие 3',
-          image: '../../../assets/images/prototype/upcoming-activity-3.jpg',
+          image: 'assets/images/prototype/upcoming-activity-3.jpg',
         },
         {
           upcomingEventId: 4,
           name: 'событие 4',
-          image: '../../../assets/images/prototype/upcoming-activity-4.jpg',
+          image: 'assets/images/prototype/upcoming-activity-4.jpg',
         },
         {
           upcomingEventId: 5,
           name: 'событие 5',
-          image: '../../../assets/images/prototype/upcoming-activity-5.jpg',
+          image: 'assets/images/prototype/upcoming-activity-5.jpg',
         },
       ];
       return upcomingEvents;
@@ -139,42 +139,42 @@ export class HomeComponent implements OnInit {
     function getPopularActivities() {
       let popularActivities = [
         {
-          activity_image: '../../../assets/images/prototype/pop-activity-1.jpg',
+          activity_image: 'assets/images/prototype/pop-activity-1.jpg',
           start_price: 200,
           activity_name: 'событие концертное',
           offers: 17,
         },
         {
-          activity_image: '../../../assets/images/prototype/pop-activity-2.jpg',
+          activity_image: 'assets/images/prototype/pop-activity-2.jpg',
           start_price: 400,
           activity_name: 'велосипед',
           offers: 17,
         },
         {
-          activity_image: '../../../assets/images/prototype/pop-activity-3.jpg',
+          activity_image: 'assets/images/prototype/pop-activity-3.jpg',
           start_price: 200,
           activity_name: 'событие 12222',
           offers: 17,
         },{
-          activity_image: '../../../assets/images/prototype/pop-activity-4.jpg',
+          activity_image: 'assets/images/prototype/pop-activity-4.jpg',
           start_price: 200,
           activity_name: 'событие 12222',
           offers: 17,
         },
         {
-          activity_image: '../../../assets/images/prototype/pop-activity-1.jpg',
+          activity_image: 'assets/images/prototype/pop-activity-1.jpg',
           start_price: 200,
           activity_name: 'событие 12222',
           offers: 17,
         },
         {
-          activity_image: '../../../assets/images/prototype/pop-activity-2.jpg',
+          activity_image: 'assets/images/prototype/pop-activity-2.jpg',
           start_price: 200,
           activity_name: 'событие 12222',
           offers: 17,
         },
         {
-          activity_image: '../../../assets/images/prototype/pop-activity-3.jpg',
+          activity_image: 'assets/images/prototype/pop-activity-3.jpg',
           start_price: 200,
           activity_name: 'банка кетчупа',
           offers: 17,
@@ -193,7 +193,7 @@ export class HomeComponent implements OnInit {
           adress: 'test',
           rating: 5.6,
           feedbacks: 17,
-          image: '../../../assets/images/prototype/top-activity-1.jpg',
+          image: 'assets/images/prototype/top-activity-1.jpg',
         },
         {
           recreationalfacility_id: 2,
@@ -203,7 +203,7 @@ export class HomeComponent implements OnInit {
           adress: 'test address 2',
           rating: 7.2,
           feedbacks: 24,
-          image: '../../../assets/images/prototype/top-activity-2.jpg',
+          image: 'assets/images/prototype/top-activity-2.jpg',
         },
         {
           recreationalfacility_id: 3,
@@ -213,7 +213,7 @@ export class HomeComponent implements OnInit {
           adress: 'test address 3',
           rating: 8.4,
           feedbacks: 0,
-          image: '../../../assets/images/prototype/top-activity-3.jpg',
+          image: 'assets/images/prototype/top-activity-3.jpg',
         },
         {
           recreationalfacility_id: 4,
@@ -223,7 +223,7 @@ export class HomeComponent implements OnInit {
           adress: 'test address 4',
           rating: 10.0,
           feedbacks: 214,
-          image: '../../../assets/images/prototype/top-activity-4.jpg',
+          image: 'assets/images/prototype/top-activity-4.jpg',
         },
         {
           recreationalfacility_id: 5,
@@ -233,7 +233,7 @@ export class HomeComponent implements OnInit {
           adress: 'test address 5',
           rating: 1,
           feedbacks: 5,
-          image: '../../../assets/images/prototype/top-activity-1.jpg',
+          image: 'assets/images/prototype/top-activity-1.jpg',
         },
         {
           recreationalfacility_id: 6,
@@ -243,7 +243,7 @@ export class HomeComponent implements OnInit {
           adress: 'test address 6',
           rating: 1,
           feedbacks: 24578,
-          image: '../../../assets/images/prototype/top-activity-2.jpg',
+          image: 'assets/images/prototype/top-activity-2.jpg',
         }
       ];
       return BestFacilities;
