@@ -17,7 +17,7 @@ export class ProviderComponent implements OnInit {
     reviews_num: '966 отзывов',
     activities: [
       {
-        image: '../../../assets/images/prototype/buggy.jpg',
+        image: 'assets/images/prototype/buggy.jpg',
         name: 'Багги',
         price: '400',
         link: '/activity',

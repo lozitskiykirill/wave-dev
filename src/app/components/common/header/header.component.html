@@ -2,20 +2,20 @@
   <div class="container">
     <div class="header_inner">
       <a class="logo"  [routerLink]="['/']" style="display: inline-block; max-height: 100px;">
-        <img src="../../../../assets/images/icons/wave-logo.png" alt="logo">
+        <img src="assets/images/icons/wave-logo.png" alt="logo">
       </a>
       <div class="header_menu">
         <a [routerLink]="['/search']" style="margin-right: 30px;">Активности</a>
         <a [routerLink]="['/schools']" style="margin-right: 30px;">Школы</a>
         <div class="user-guest" *ngIf="!isLoggedIn">
           <a (click)="activeAuth()">Вход
-            <img src="../../../../assets/images/icons/profile-man-icon.svg" alt="_">
+            <img src="assets/images/icons/profile-man-icon.svg" alt="_">
           </a>
         </div>
         <div class="header_user user-logged" *ngIf="isLoggedIn">
           <div class="header_notifications">
             <div class="header_notifications_icon">
-              <img src="../../../../assets/images/icons/notification-bell.svg" alt="_">
+              <img src="assets/images/icons/notification-bell.svg" alt="_">
               <span class="header_notifications_counter">
                 {{notifications.length}}
               </span>
@@ -27,14 +27,14 @@
             </div>
           </div>
           <div class="header_messages" [routerLink]="['/messenger']">
-            <img src="../../../../assets/images/icons/message-mail.svg" alt="_">
+            <img src="assets/images/icons/message-mail.svg" alt="_">
           </div>
           <div class="account_dropdown_hover">
           <div class="header_username" [routerLink]="['/account']">
             {{username}}
           </div>
           <div class="header_avatar" [routerLink]="['/account']">
-            <img src="../../../../assets/images/prototype/userlogo-1.png" alt="_">
+            <img src="assets/images/prototype/userlogo-1.png" alt="_">
           </div>
           </div>
           <div class="account_dropdown">
